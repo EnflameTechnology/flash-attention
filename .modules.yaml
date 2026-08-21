@@ -1,0 +1,14 @@
+default:
+  exclude: &default_exclude
+    - .*\.md
+    - (.+/)?\.owners
+    - (.+/)?\.gitignore
+    - .gerrit/.*
+    - .config/.*  # 保存 cmake 配置命令，与软件质量无关
+    - .pipeline/daily/daily_test.json
+modules:
+  - name: "all"
+    match:
+      - .* # 匹配所有文件
+    exclude:
+      - *default_exclude

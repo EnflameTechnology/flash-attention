@@ -1,0 +1,602 @@
+# Copyright (c) 2023, Tri Dao.
+
+from typing import Optional, Union, Tuple, List
+
+import torch
+import torch.nn as nn
+import torch_gcu
+
+# isort: off
+# We need to import the CUDA kernels after importing torch
+# Use relative import to support build-from-source installation in vLLM
+import flash_attn_gcu as flash_attn_cuda
+
+# isort: on
+DEFAULT_FA_VERSION = 2
+
+def _is_fa2_supported(device = None) -> Tuple[bool, Optional[str]]:
+    return True, None
+
+def _is_fa3_supported(device = None) -> Tuple[bool, Optional[str]]:
+    return True, None
+
+def _is_fa4_supported(device = None) -> Tuple[bool, Optional[str]]:
+    return False, "FA4 gcu is NOT SUPPORT yet, please try FA3/FA2"
+
+def is_fa_version_supported(fa_version: int, device = None) -> bool:
+    assert fa_version in [2, 3, 4], f"Unsupported FA version: {fa_version}"
+    if fa_version == 2:
+        return _is_fa2_supported(device)[0]
+    elif fa_version == 3:
+        return _is_fa3_supported(device)[0]
+    elif fa_version == 4:
+        return _is_fa4_supported(device)[0]
+
+def fa_version_unsupported_reason(fa_version: int, device = None) \
+    -> Optional[str]:
+    assert fa_version in [2, 3, 4], f"Unsupported FA version: {fa_version}"
+    if fa_version == 2:
+        return _is_fa2_supported(device)[1]
+    elif fa_version == 3:
+        return _is_fa3_supported(device)[1]
+    elif fa_version == 4:
+        return _is_fa4_supported(device)[1]
+
+#
+#  For vLLM we only care about `flash_attn_varlen_func` and 
+#   `flash_attn_with_kvcache` so we only maintain wrappers for these two.
+#
+
+
+def maybe_contiguous(x):
+    return x.contiguous() if x is not None and x.stride(-1) != 1 else x
+
+
+def _is_kv_quantized(k: torch.Tensor, v: torch.Tensor) -> bool:
+    """True when k/v are FP8 or int8 (GCU flash_attn_gcu.varlen_fwd_fp8kv / mha_varlen_fwd_fp8KV)."""
+    if k.dtype != v.dtype:
+        raise ValueError("flash_attn_varlen_func: k and v must have the same dtype")
+    # if k.dtype == torch.int8:
+    #     return True
+    for name in ("float8_e4m3fn", "float8_e5m2"):
+        dt = getattr(torch, name, None)
+        if dt is not None and k.dtype == dt:
+            return True
+    return False
+
+
+def _get_block_size_n(device, head_dim, is_dropout, is_causal):
+    # This should match the block sizes in the CUDA kernel
+    assert head_dim <= 256
+    major, minor = torch.cuda.get_device_capability(device)
+    is_sm8x = major == 8 and minor > 0  # Only include sm86 and sm89, exclude sm80 (A100)
+    is_sm80 = major == 8 and minor == 0
+    is_sm90 = major == 9 and minor == 0
+    if head_dim <= 32:
+        return 128
+    if head_dim <= 64:
+        return 128 if not is_dropout else 64
+    elif head_dim <= 96:
+        return 64
+    elif head_dim <= 128:
+        if is_sm8x:
+            return 64 if (not is_dropout and is_causal) else 32
+        else:
+            return 64 if not is_dropout else 32
+    elif head_dim <= 160:
+        if is_sm8x:
+            return 64
+        else:
+            return 32
+    elif head_dim <= 192:
+        return 64
+    elif head_dim <= 224:
+        return 64
+    elif head_dim <= 256:
+        return 64
+
+def get_scheduler_metadata(
+    batch_size,
+    max_seqlen_q,
+    max_seqlen_k,
+    num_heads_q,
+    num_heads_kv,
+    headdim,
+    cache_seqlens: torch.Tensor,
+    qkv_dtype=torch.bfloat16,
+    headdim_v=None,
+    cu_seqlens_q: Optional[torch.Tensor] = None,
+    cu_seqlens_k_new: Optional[torch.Tensor] = None,
+    cache_leftpad: Optional[torch.Tensor] = None,
+    page_size: Optional[int] = None,
+    max_seqlen_k_new=0,
+    causal=False,
+    window_size=(-1, -1),  # -1 means infinite context window
+    has_softcap=False,
+    num_splits=0,  # Can be tuned for speed
+    pack_gqa=None,  # Can be tuned for speed
+    sm_margin=0,  # Can be tuned if some SMs are used for communication
+):
+    cache_seqlens = maybe_contiguous(cache_seqlens)
+    if headdim_v is None:
+        headdim_v = headdim
+    scheduler_metadata = flash_attn_cuda.get_scheduler_metadata(
+        batch_size,
+        max_seqlen_q,
+        max_seqlen_k,
+        num_heads_q,
+        num_heads_kv,
+        headdim,
+        headdim_v,
+        qkv_dtype,
+        cache_seqlens,
+        cu_seqlens_q,
+        None,  # cu_seqlens_k
+        cu_seqlens_k_new,
+        None,  # seqused_q
+        cache_leftpad,
+        page_size,
+        max_seqlen_k_new,
+        causal,
+        window_size[0],
+        window_size[1],
+        has_softcap,
+        num_splits,
+        pack_gqa,
+        sm_margin,
+    )
+
+    return scheduler_metadata
+
+
+def flash_attn_varlen_func(
+    q,
+    k,
+    v,
+    max_seqlen_q,
+    cu_seqlens_q,
+    max_seqlen_k,
+    cu_seqlens_k=None,  # only used for non-paged prefill
+    seqused_k=None,
+    q_v=None,
+    dropout_p=0.0,
+    softmax_scale=None,
+    causal=False,
+    window_size: Optional[List[int]] = None,
+    softcap=0.0,  # 0.0 means deactivated
+    alibi_slopes=None,
+    deterministic=False,
+    return_attn_probs=False,
+    block_table=None,
+    return_softmax_lse=False,
+    out=None,
+    # FA3 Only
+    scheduler_metadata=None,
+    q_descale=None,
+    k_descale=None,
+    v_descale=None,
+    num_splits: int = 0,
+    # Version selector
+    fa_version: int = DEFAULT_FA_VERSION,
+    s_aux=None,
+    cp_world_size=1,
+    cp_rank=0,
+    cp_tot_seqused_k=None,
+):
+    """dropout_p should be set to 0.0 during evaluation
+    Supports multi-query and grouped-query attention (MQA/GQA) by passing in K, V with fewer heads
+    than Q. Note that the number of heads in Q must be divisible by the number of heads in KV.
+    For example, if Q has 6 heads and K, V have 2 heads, head 0, 1, 2 of Q will attention to head
+    0 of K, V, and head 3, 4, 5 of Q will attention to head 1 of K, V.
+
+    If causal=True, the causal mask is aligned to the bottom right corner of the attention matrix.
+    For example, if seqlen_q = 2 and seqlen_k = 5, the causal mask (1 = keep, 0 = masked out) is:
+        1 1 1 1 0
+        1 1 1 1 1
+    If seqlen_q = 5 and seqlen_k = 2, the causal mask is:
+        0 0
+        0 0
+        0 0
+        1 0
+        1 1
+    If the row of the mask is all zero, the output will be zero.
+
+    If window_size != (-1, -1), implements sliding window local attention. Query at position i
+    will only attend to keys between
+    [i + seqlen_k - seqlen_q - window_size[0], i + seqlen_k - seqlen_q + window_size[1]] inclusive.
+
+    Arguments:
+        q: (total_q, nheads, headdim), where total_q = total number of query tokens in the batch.
+        k: (total_k, nheads_k, headdim), where total_k = total number of key tokens in the batch.
+        v: (total_k, nheads_k, headdim), where total_k = total number of key tokens in the batch.
+        cu_seqlens_q: (batch_size + 1,), dtype torch.int32. The cumulative sequence lengths
+           of the sequences in the batch, used to index into q.
+        cu_seqlens_k: (batch_size + 1,), dtype torch.int32. The cumulative sequence lengths
+           of the sequences in the batch, used to index into kv.
+        max_seqlen_q: int. Maximum query sequence length in the batch.
+        max_seqlen_k: int. Maximum key sequence length in the batch.
+        dropout_p: float. Dropout probability.
+        softmax_scale: float. The scaling of QK^T before applying softmax.
+            Default to 1 / sqrt(headdim).
+        causal: bool. Whether to apply causal attention mask (e.g., for auto-regressive modeling).
+        window_size: (left, right). If not (-1, -1), implements sliding window local attention.
+        softcap: float. Anything > 0 activates softcapping attention.
+        alibi_slopes: (nheads,) or (batch_size, nheads), fp32. A bias of
+            (-alibi_slope * |i + seqlen_k - seqlen_q - j|)
+            is added to the attention score of query i and key j.
+        deterministic: bool. Whether to use the deterministic implementation of the backward pass,
+            which is slightly slower and uses more memory. The forward pass is always deterministic.
+        return_attn_probs: bool. Whether to return the attention probabilities. This option is for
+           testing only. The returned probabilities are not guaranteed to be correct
+           (they might not have the right scaling).
+    Return:
+        out: (total, nheads, headdim).
+        softmax_lse [optional, if return_softmax_lse=True]: (nheads, total_q_seqlen). The
+            logsumexp of each row of the matrix QK^T * scaling (e.g., log of the softmax
+            normalization factor).
+    """
+    assert cu_seqlens_k is not None or seqused_k is not None, \
+        "cu_seqlens_k or seqused_k must be provided"
+    assert cu_seqlens_k is None or seqused_k is None, \
+        "cu_seqlens_k and seqused_k cannot be provided at the same time"
+    assert block_table is None or seqused_k is not None, \
+        "seqused_k must be provided if block_table is provided"
+    
+    if softmax_scale is None:
+        softmax_scale = q.shape[-1] ** (-0.5)
+    # custom op does not support non-tuple input
+    real_window_size: Tuple[int, int]
+    if window_size is None:
+        real_window_size = (-1, -1)
+    else:
+        assert len(window_size) == 2
+        real_window_size = (window_size[0], window_size[1])
+    q, k, v = [maybe_contiguous(x) for x in (q, k, v)]
+
+    dummy_cu_seqlens_k = torch.empty_like(cu_seqlens_q)
+
+    if fa_version == 2:
+        if scheduler_metadata is not None and q_descale is not None \
+            and k_descale is not None and v_descale is not None:
+                raise NotImplementedError(
+                    "FA2 does not support scheduler_metadata, q_descale, "
+                    "k_descale, v_descale"
+                )
+        if s_aux is not None:
+            raise NotImplementedError("FA2 does not support s_aux")
+        if num_splits > 1:
+            raise NotImplementedError("FA2 does not support num_splits > 1")
+        out, softmax_lse, S_dmask, rng_state = flash_attn_cuda.varlen_fwd(
+            q,
+            k,
+            v,
+            out,
+            cu_seqlens_q,
+            # cu_seqlens_k not used since we use seqused_k, but flash_api.cpp
+            # still wants it so we pass all zeros
+            dummy_cu_seqlens_k if cu_seqlens_k is None else cu_seqlens_k,
+            seqused_k,
+            None,
+            block_table,
+            alibi_slopes,
+            max_seqlen_q,
+            max_seqlen_k,
+            dropout_p,
+            softmax_scale,
+            False,
+            causal,
+            real_window_size[0],
+            real_window_size[1],
+            softcap,
+            return_softmax_lse and dropout_p > 0,
+            None,
+            None,            # s_aux
+        )
+    elif fa_version == 3:
+        assert alibi_slopes is None, "Alibi is not supported in FA3"
+        # out, softmax_lse, _, _ = torch.ops._vllm_fa3_C.fwd(
+        #     q, k, v,
+        #     None, None,       # k_new, v_new
+        #     q_v,
+        #     out,
+        #     cu_seqlens_q,
+        #     cu_seqlens_k,     # cu_seqlens_k
+        #     None,             # cu_seqlens_k_new
+        #     None, seqused_k,  # seqused_q, seqused_k
+        #     max_seqlen_q, max_seqlen_k,
+        #     block_table,
+        #     None,             # kv_batch_idx
+        #     None,             # leftpad_k
+        #     None, None, None, # rotary_cos, rotary_sin, seqlens_rotary
+        #     q_descale, k_descale, v_descale,
+        #     softmax_scale,
+        #     causal,
+        #     real_window_size[0], real_window_size[1],
+        #     softcap,
+        #     True,             # rotary_interleaved
+        #     scheduler_metadata,
+        #     num_splits,
+        #     None,             # pack_gqa
+        #     0,                # sm_margin
+        #     s_aux,            # s_aux
+        #     cp_world_size,
+        #     cp_rank,
+        #     cp_tot_seqused_k,
+        # )
+        use_fp8_kv_kernel = _is_kv_quantized(k, v)
+        if use_fp8_kv_kernel:
+            # Order matches csrc_gcu mha_varlen_fwd_fp8KV:
+            # ..., leftpad, block_table, alibi, q_descale, k_descale, v_descale,
+            # s_aux, scheduler_metadata, max_seqlen_q, max_seqlen_k, ...
+            out, softmax_lse, S_dmask, rng_state = flash_attn_cuda.varlen_fwd_fp8kv(
+                q,
+                k,
+                v,
+                out,
+                cu_seqlens_q,
+                dummy_cu_seqlens_k if cu_seqlens_k is None else cu_seqlens_k,
+                seqused_k,
+                None,
+                block_table,
+                None,
+                None,
+                k_descale,
+                v_descale,
+                s_aux,
+                scheduler_metadata,
+                max_seqlen_q,
+                max_seqlen_k,
+                dropout_p,
+                softmax_scale,
+                False,
+                causal,
+                real_window_size[0],
+                real_window_size[1],
+                softcap,
+                return_softmax_lse and dropout_p > 0,
+                None,
+            )
+        else:
+            out, softmax_lse, S_dmask, rng_state = flash_attn_cuda.varlen_fwd(
+                q,
+                k,
+                v,
+                out,
+                cu_seqlens_q,
+                # cu_seqlens_k not used since we use seqused_k, but flash_api.cpp
+                # still wants it so we pass all zeros
+                dummy_cu_seqlens_k if cu_seqlens_k is None else cu_seqlens_k,
+                seqused_k,
+                None,
+                block_table,
+                None,
+                max_seqlen_q,
+                max_seqlen_k,
+                dropout_p,
+                softmax_scale,
+                False,
+                causal,
+                real_window_size[0],
+                real_window_size[1],
+                softcap,
+                return_softmax_lse and dropout_p > 0,
+                None,
+                s_aux,
+            )
+    else:
+        raise ValueError(f"Unsupported FA version: {fa_version}")
+    return (out, softmax_lse) if return_softmax_lse else out
+
+
+def flash_attn_with_kvcache(
+    q,
+    k_cache,
+    v_cache,
+    k=None,
+    v=None,
+    rotary_cos=None,
+    rotary_sin=None,
+    cache_seqlens: Optional[Union[(int, torch.Tensor)]] = None,
+    cache_batch_idx: Optional[torch.Tensor] = None,
+    cache_leftpad: Optional[torch.Tensor] = None,
+    block_table: Optional[torch.Tensor] = None,
+    softmax_scale=None,
+    causal=False,
+    window_size=(-1, -1),  # -1 means infinite context window
+    softcap=0.0,  # 0.0 means deactivated
+    rotary_interleaved=True,
+    alibi_slopes=None,
+    num_splits=0,
+    return_softmax_lse=False,
+    *,
+    out=None,
+    # FA3 Only
+    scheduler_metadata=None,
+    q_descale=None,
+    k_descale=None,
+    v_descale=None,
+    # Version selector
+    fa_version: int = 2,
+):
+    """
+    If k and v are not None, k_cache and v_cache will be updated *inplace* with the new values from
+    k and v. This is useful for incremental decoding: you can pass in the cached keys/values from
+    the previous step, and update them with the new keys/values from the current step, and do
+    attention with the updated cache, all in 1 kernel.
+
+    If you pass in k / v, you must make sure that the cache is large enough to hold the new values.
+    For example, the KV cache could be pre-allocated with the max sequence length, and you can use
+    cache_seqlens to keep track of the current sequence lengths of each sequence in the batch.
+
+    Also apply rotary embedding if rotary_cos and rotary_sin are passed in. The key @k will be
+    rotated by rotary_cos and rotary_sin at indices cache_seqlens, cache_seqlens + 1, etc.
+    If causal or local (i.e., window_size != (-1, -1)), the query @q will be rotated by rotary_cos
+    and rotary_sin at indices cache_seqlens, cache_seqlens + 1, etc.
+    If not causal and not local, the query @q will be rotated by rotary_cos and rotary_sin at
+    indices cache_seqlens only (i.e. we consider all tokens in @q to be at position cache_seqlens).
+
+    See tests/test_flash_attn.py::test_flash_attn_kvcache for examples of how to use this function.
+
+    Supports multi-query and grouped-query attention (MQA/GQA) by passing in KV with fewer heads
+    than Q. Note that the number of heads in Q must be divisible by the number of heads in KV.
+    For example, if Q has 6 heads and K, V have 2 heads, head 0, 1, 2 of Q will attention to head
+    0 of K, V, and head 3, 4, 5 of Q will attention to head 1 of K, V.
+
+    If causal=True, the causal mask is aligned to the bottom right corner of the attention matrix.
+    For example, if seqlen_q = 2 and seqlen_k = 5, the causal mask (1 = keep, 0 = masked out) is:
+        1 1 1 1 0
+        1 1 1 1 1
+    If seqlen_q = 5 and seqlen_k = 2, the causal mask is:
+        0 0
+        0 0
+        0 0
+        1 0
+        1 1
+    If the row of the mask is all zero, the output will be zero.
+
+    If window_size != (-1, -1), implements sliding window local attention. Query at position i
+    will only attend to keys between
+    [i + seqlen_k - seqlen_q - window_size[0], i + seqlen_k - seqlen_q + window_size[1]] inclusive.
+
+    Note: Does not support backward pass.
+
+    Arguments:
+        q: (batch_size, seqlen, nheads, headdim)
+        k_cache: (batch_size_cache, seqlen_cache, nheads_k, headdim) if there's no block_table,
+            or (num_blocks, page_block_size, nheads_k, headdim) if there's a block_table (i.e. paged KV cache)
+            page_block_size must be a multiple of 256.
+        v_cache: (batch_size_cache, seqlen_cache, nheads_k, headdim) if there's no block_table,
+            or (num_blocks, page_block_size, nheads_k, headdim) if there's a block_table (i.e. paged KV cache)
+        k [optional]: (batch_size, seqlen_new, nheads_k, headdim). If not None, we concatenate
+            k with k_cache, starting at the indices specified by cache_seqlens.
+        v [optional]: (batch_size, seqlen_new, nheads_k, headdim). Similar to k.
+        rotary_cos [optional]: (seqlen_ro, rotary_dim / 2). If not None, we apply rotary embedding
+            to k and q. Only applicable if k and v are passed in. rotary_dim must be divisible by 16.
+        rotary_sin [optional]: (seqlen_ro, rotary_dim / 2). Similar to rotary_cos.
+        cache_seqlens: int, or (batch_size,), dtype torch.int32. The sequence lengths of the
+            KV cache.
+        block_table [optional]: (batch_size, max_num_blocks_per_seq), dtype torch.int32.
+        cache_batch_idx: (batch_size,), dtype torch.int32. The indices used to index into the KV cache.
+            If None, we assume that the batch indices are [0, 1, 2, ..., batch_size - 1].
+            If the indices are not distinct, and k and v are provided, the values updated in the cache
+                 might come from any of the duplicate indices.
+        softmax_scale: float. The scaling of QK^T before applying softmax.
+            Default to 1 / sqrt(headdim).
+        causal: bool. Whether to apply causal attention mask (e.g., for auto-regressive modeling).
+        window_size: (left, right). If not (-1, -1), implements sliding window local attention.
+        softcap: float. Anything > 0 activates softcapping attention.
+        rotary_interleaved: bool. Only applicable if rotary_cos and rotary_sin are passed in.
+            If True, rotary embedding will combine dimensions 0 & 1, 2 & 3, etc. If False,
+            rotary embedding will combine dimensions 0 & rotary_dim / 2, 1 & rotary_dim / 2 + 1
+            (i.e. GPT-NeoX style).
+        alibi_slopes: (nheads,) or (batch_size, nheads), fp32. A bias of
+            (-alibi_slope * |i + seqlen_k - seqlen_q - j|)
+            is added to the attention score of query i and key j.
+        num_splits: int. If > 1, split the key/value into this many chunks along the sequence.
+           If num_splits == 1, we don't split the key/value. If num_splits == 0, we use a heuristic
+           to automatically determine the number of splits.
+           Don't change this unless you know what you are doing.
+        return_softmax_lse: bool. Whether to return the logsumexp of the attention scores.
+
+    Return:
+        out: (batch_size, seqlen, nheads, headdim).
+        softmax_lse [optional, if return_softmax_lse=True]: (batch_size, nheads, seqlen). The
+            logsumexp of each row of the matrix QK^T * scaling (e.g., log of the softmax
+            normalization factor).
+    """
+    assert k_cache.stride(-1) == 1, "k_cache must have contiguous last dimension"
+    assert v_cache.stride(-1) == 1, "v_cache must have contiguous last dimension"
+    q, k, v = [maybe_contiguous(x) for x in (q, k, v)]
+    if softmax_scale is None:
+        softmax_scale = q.shape[-1] ** (-0.5)
+    if cache_seqlens is not None and isinstance(cache_seqlens, int):
+        cache_seqlens = torch.full(
+            (k_cache.shape[0],), cache_seqlens, dtype=torch.int32, device=k_cache.device
+        )
+        cache_seqlens = maybe_contiguous(cache_seqlens)
+    cache_batch_idx = maybe_contiguous(cache_batch_idx)
+    block_table = maybe_contiguous(block_table)
+
+    if fa_version == 2:
+        if (
+            scheduler_metadata is not None
+            and q_descale is not None
+            and k_descale is not None
+            and v_descale is not None
+        ):
+            raise NotImplementedError(
+                "FA2 does not support scheduler_metadata, q_descale, " "k_descale, v_descale"
+            )
+        out, softmax_lse = flash_attn_cuda.fwd_kvcache(
+            q,
+            k_cache,
+            v_cache,
+            k,
+            v,  # k_new, v_new
+            cache_seqlens,
+            rotary_cos,
+            rotary_sin,
+            cache_batch_idx,
+            cache_leftpad,
+            block_table,
+            alibi_slopes,
+            out,
+            softmax_scale,
+            causal,
+            window_size[0],
+            window_size[1],
+            softcap,
+            rotary_interleaved,
+            num_splits,
+        )
+    elif fa_version == 3:
+        out, softmax_lse = flash_attn_cuda.fwd_kvcache(
+            q,
+            k_cache,
+            v_cache,
+            k,
+            v,  # k_new, v_new
+            cache_seqlens,
+            rotary_cos,
+            rotary_sin,
+            cache_batch_idx,
+            cache_leftpad,
+            block_table,
+            alibi_slopes,
+            out,
+            softmax_scale,
+            causal,
+            window_size[0],
+            window_size[1],
+            softcap,
+            rotary_interleaved,
+            num_splits,
+        )
+    #     assert alibi_slopes is None, "Alibi is not supported in FA3"
+    #     out, softmax_lse, _, _ = torch.ops._vllm_fa3_C.fwd(
+    #         q, k_cache, v_cache, # q, k, v
+    #         k, v,                # k_new, v_new
+    #         None,                # q_v
+    #         out,
+    #         None, None,          # cu_seqlens_q, cu_seqlens_k
+    #         None,                # cu_seqlens_k_new
+    #         None, cache_seqlens, # seqused_q, seqused_k
+    #         None, None,          # max_seqlen_q, max_seqlen_k
+    #         block_table,
+    #         cache_batch_idx,     # kv_batch_idx
+    #         None,                # leftpad_k
+    #         None, None, None,    # rotary_cos, rotary_sin, seqlens_rotary
+    #         q_descale, k_descale, v_descale,
+    #         softmax_scale,
+    #         causal,
+    #         window_size[0], window_size[1],
+    #         softcap,
+    #         rotary_interleaved,  # rotary_interleaved
+    #         scheduler_metadata,
+    #         num_splits,          # num_splits
+    #         None,                # pack_gqa
+    #         0,                   # sm_margin
+    #     )
+    else:
+        raise ValueError(f"Unsupported FA version: {fa_version}")
+    return (out, softmax_lse) if return_softmax_lse else out

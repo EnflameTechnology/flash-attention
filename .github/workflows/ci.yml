@@ -1,0 +1,69 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+env:
+  DOCKER_IMAGE: registry-egc.enflame-tech.com/enflame/ci_sast:v1.0-os
+  CI_IMAGE: registry-egc.enflame-tech.com/artifacts/public_pytorch:v2.11.0-TR3.8.106-ubuntu2204
+  SAST_REPO: EnflameTechnology/sast
+  SAST_BRANCH: main
+
+jobs:
+  all-ci-check:
+    runs-on: S60
+    
+    steps:
+
+      - name: Checkout SAST tools
+        uses: actions/checkout@v4
+        with:
+          repository: ${{env.SAST_REPO}}
+          ref: ${{env.SAST_BRANCH}}
+          path: ./sast
+
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Required for full git history to compare changes
+          path: ./flash-attention
+
+      - name: Run static code analysis
+        run: |
+          sudo docker run --rm \
+            -v "$(pwd)/flash-attention:/app" \
+            -v "$(pwd)/sast:/sast" \
+            -u "$(id -u):$(id -g)" \
+            -w /app \
+            "${{ env.DOCKER_IMAGE }}" \
+            bash -c 'cd /app && python3 /sast/run.py --all_ci_check'
+
+      - name: Install driver
+        run: |
+          pwd;ls -l;ls -l ./flash-attention;ls -l ./flash-attention/tests;sudo bash ./flash-attention/tests/install_driver.sh
+
+
+      - name: Run CI build and tests
+        run: |
+          sudo docker run --rm \
+            -v "$(pwd)/:/app" \
+            --volume=/log:/log \
+            --volume=/root:/root \
+            --volume=/lib/modules/:/lib/modules/ \
+            --volume=/usr/src/:/usr/src/ \
+            --volume=/dev:/dev \
+            --privileged \
+            -v /home/pypi_packages:/home/pypi_packages \
+            -w /app \
+            "${{ env.CI_IMAGE }}" \
+            bash -c 'git config --global --add safe.directory /app/flash-attention && sudo bash ./flash-attention/.pipeline/build.sh ci_build;sudo bash ./flash-attention/tests/install_env.sh;cd /app/flash-attention/tests/;bash run_test_all.sh all'
+
+      - name: Clean up
+        if: always()
+        run: |
+          sudo rm -rf flash-attention sast
