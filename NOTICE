@@ -1,0 +1,1625 @@
+Copyright 2026
+
+[flash_attention : 2.7.2]
+
+Phase: RELEASED
+Distribution: OPENSOURCE
+
+Notices Report Content
+ * License Data
+ * License Text
+ * Origin Copyright Text
+
+Components: 
+
+annotated-types 0.8.0: https://github.com/annotated-types/annotated-types : MIT License
+black 26.3.1: https://github.com/ambv/black : MIT License
+Click - Python Command Line Utility 8.4.2: http://click.pocoo.org/ : BSD 3-clause "New" or "Revised" License
+ddt 1.7.2: http://ddt.readthedocs.org/ : MIT License
+einops 0.8.2: https://github.com/arogozhnikov/einops : MIT License
+exceptiongroup 1.3.1: https://github.com/python-trio/exceptiongroup : MIT License
+expecttest 0.1.3: https://github.com/ezyang/ghstack : MIT License
+looseversion 1.3.0: https://github.com/effigies/looseversion : Python Software Foundation License 2.0
+mypy-extensions 1.1.0: http://www.mypy-lang.org/ : MIT License
+Packaging 26.2: https://github.com/pypa/packaging : (BSD 2-clause "Simplified" License OR Apache License 2.0)
+pathspec 1.1.1: https://github.com/cpburnz/python-path-specification : Mozilla Public License 2.0
+platformdirs 4.11.3: https://platformdirs.readthedocs.io : MIT License
+pydantic 2.13.4: https://pydantic-docs.helpmanual.io/ : MIT License
+pydantic-core 2.46.4: https://github.com/pydantic/pydantic-core : MIT License
+Pygments - Python syntax highlighter 2.21.0: http://pygments.org/ : BSD 2-clause "Simplified" License
+pypi/setuptools 69.5.1: https://pypi.org/project/setuptools/ : MIT License
+pytest 9.0.2: http://pytest.org : MIT License
+python-pluggy 1.6.0: https://pypi.python.org/pypi/pluggy : MIT License
+python-typing-extensions 4.16.0 : Python Software Foundation License 2.0
+pytokens 0.4.1: https://github.com/tusharsadhwani/pytokens : MIT License
+pytorch 2.9.0: http://pytorch.org : BSD 3-clause "New" or "Revised" License
+RonnyPfannschmidt/iniconfig 2.3.0: https://github.com/RonnyPfannschmidt/iniconfig : MIT License
+tomli 2.4.1: https://github.com/hukkin/tomli : MIT License
+typing-inspection 0.4.4 : MIT License
+vllm 0.8.5: https://docs.vllm.ai : Apache License 2.0
+vllm v0.11.1rc1: https://docs.vllm.ai : Apache License 2.0
+xformers 0.0.20.dev537: https://facebookresearch.github.io/xformers/ : BSD 3-clause "New" or "Revised" License
+
+Copyright Text: 
+
+annotated-types 0.8.0 pypi:annotated-types/0.8.0: https://github.com/annotated-types/annotated-types
+	Copyright (C) 2022 the contributors
+black 26.3.1 pypi:black/26.3.1: https://github.com/ambv/black
+	Copyright (C) 1991-1995 Stichting Mathematisch Centrum Amsterdam, The Netherlands. All rights reserved
+	Copyright (C) 1995-2001 Corporation for National Research Initiatives; All Rights
+	Copyright (C) 2001-2006 Python Software Foundation.
+	Copyright (C) 2004-2005 Elemental Security, Inc. All Rights Reserved
+	Copyright (C) 2006 Google, Inc. All Rights Reserved
+	Copyright (C) 2019 Reece Hart
+Click - Python Command Line Utility 8.4.2 pypi:click/8.4.2: http://click.pocoo.org/
+	Copyright (C) 2001-2006 Gregory P. Ward
+	Copyright (C) 2001-2006 Gregory P. Ward. All rights reserved
+	Copyright (C) 2002-2006 Python Software Foundation
+	Copyright (C) 2002-2006 Python Software Foundation. All rights reserved
+	Copyright (C) 2014 Pallets
+ddt 1.7.2 pypi:ddt/1.7.2: http://ddt.readthedocs.org/
+	No Copyrights found
+einops 0.8.2 pypi:einops/0.8.2: https://github.com/arogozhnikov/einops
+	Copyright (C) 2018 Alex Rogozhnikov
+exceptiongroup 1.3.1 pypi:exceptiongroup/1.3.1: https://github.com/python-trio/exceptiongroup
+	Copyright (C) 2022 Alex Gr
+expecttest 0.1.3 pypi:expecttest/0.1.3: https://github.com/ezyang/ghstack
+	No Copyrights found
+looseversion 1.3.0 pypi:looseversion/1.3.0: https://github.com/effigies/looseversion
+	No Copyrights found
+mypy-extensions 1.1.0 pypi:mypy-extensions/1.1.0: http://www.mypy-lang.org/
+	Copyright (C) 2016-2017 Jukka Lehtosalo and contributors
+Packaging 26.2 pypi:packaging/26.2: https://github.com/pypa/packaging
+	Copyright (C) 2017present Ofek Lev <oss@ofek.dev>
+pathspec 1.1.1 pypi:pathspec/1.1.1: https://github.com/cpburnz/python-path-specification
+	Copyright (C) 2013-2026 Caleb P. Burns
+platformdirs 4.11.3 pypi:platformdirs/4.11.3: https://platformdirs.readthedocs.io
+	No Copyrights found
+pydantic 2.13.4 pypi:pydantic/2.13.4: https://pydantic-docs.helpmanual.io/
+	Copyright (C) 2017 to present Pydantic Services Inc. and individual contributors.
+pydantic-core 2.46.4 pypi:pydantic_core/2.46.4: https://github.com/pydantic/pydantic-core
+	Copyright (C) 2022 Samuel Colvin
+Pygments - Python syntax highlighter 2.21.0 pypi:Pygments/2.21.0: http://pygments.org/
+	No Copyrights found
+pypi/setuptools 69.5.1 pypi:setuptools/69.5.1: https://pypi.org/project/setuptools/
+	Copyright (C) 2002 Lars Gustaebel <lars@gustaebel.de>
+pytest 9.0.2 pypi:pytest/9.0.2: http://pytest.org
+	Copyright (C) 2004 Holger Krekel and others
+	Copyright (C) 2014 Gregory Boissinot
+	Copyright (C) Holger Krekel and others, 2004.
+python-pluggy 1.6.0 pypi:pluggy/1.6.0: https://pypi.python.org/pypi/pluggy
+	Copyright (C) 2015 holger krekel (rather uses bitbucket/hpk42)
+python-typing-extensions 4.16.0 pypi:typing-extensions/4.16.0
+	Copyright (C) 1991-1995 Stichting Mathematisch Centrum Amsterdam, The Netherlands. All rights reserved
+pytokens 0.4.1 pypi:pytokens/0.4.1: https://github.com/tusharsadhwani/pytokens
+	Copyright (C) 2024 Tushar Sadhwani
+pytorch 2.9.0 github:pytorch/pytorch:v2.9.0: http://pytorch.org
+	Copyright (C) (c) 2008-2009 Bjoern Hoehrmann <bjoern@hoehrmann.de> @sa http://bjoern.hoehrmann.de/utf-8/decoder/dfa/ static std::uint8_t decode(std::uint8_t& state, std::uint32_t& codep, const s
+	Copyright (C) (c) 2017-2025 NVIDIA CORPORATION
+	Copyright (C) 1984, 1987, 1992, 2000 by Stephen L. Moshier Permission has been kindly provided by the original author to incorporate the Cephes software into the Eigen codebase:
+	Copyright (C) 1984, 1989-1991, 1999, 2000-2015 Free Software Foundation, Inc.
+	Copyright (C) 1985, 1987, 1992 by Stephen L. Moshier Direct inquiries to 30 Frost Street, Cambridge, MA 02140
+	Copyright (C) 1985, 1987, 1992 by Stephen L. Moshier Direct inquiries to 30 Frost Street, Cambridge, MA 02140 const Scalar zero = 0; const Scalar one = 1; const Scalar nan = NumTraits<Scalar>::quiet_NaN()
+	Copyright (C) 1990-2001 Lucent Technologies Permission to use, copy, modify, and distribute this software and its documentation for any purpose and without fee is hereby granted, provided that the a
+	Copyright (C) 1991-1995 Stichting Mathematisch Centrum Amsterdam, The Netherlands. All rights reserved
+	Copyright (C) 1993-2025 NVIDIA CORPORATION
+	Copyright (C) 1993-2025 NVIDIA CORPORATION. All rights reserved
+	Copyright (C) 1994 by Xerox Corporation. All rights reserved
+	Copyright (C) 1994-2012 Lua.org, PUC-Rio" define LUA_AUTHORS "R. Ierusalimschy, L. H. de Figueiredo & W. Celes"
+	Copyright (C) 1994-2012 Lua.org, PUC-Rio. All rights reserved
+	Copyright (C) 1994-2021 Lua.org, PUC-Rio.
+	Copyright (C) 1995-1998 Eric Young (eay@cryptsoft.com) All rights reserved
+	Copyright (C) 1995-2011 by Fredrik Lundh
+	Copyright (C) 1995-2011 by Fredrik Lundh Pillow is the friendly PIL fork. It is
+	Copyright (C) 1995-2017 Jean-loup Gailly and Mark Adler > > This software is provided 'as-is', without any express or implied > warranty. In no event will the authors be held liable for any damages > 
+	Copyright (C) 1995-2017 Jean-loup Gailly and Mark Adler This software is provided 'as-is', without any express or implied warranty. In no event will the authors be held liable for any damages arising 
+	Copyright (C) 1996-1999 by Internet Software Consortium. Permission to use, copy, modify, and distribute this software for any purpose with or without fee is hereby granted, provided that the above co
+	Copyright (C) 1997-2001 Authors: Andrew Lumsdaine <lums@osl.iu.edu> Lie-Quan Lee <llee@osl.iu.edu> This file is part of the Iterative Template Library
+	Copyright (C) 1997-2002 Makoto Matsumoto and Takuji Nishimura
+	Copyright (C) 1997-2002 Makoto Matsumoto and Takuji Nishimura, All rights reserved
+	Copyright (C) 1997-2011 by Secret Labs AB
+	Copyright (C) 1997-2018 Sam Lantinga <slouken@libsdl.org> This software is provided 'as-is', without any express or implied warranty. In no event will the authors be held liable for any damages arisin
+	Copyright (C) 1997-2020 by Dimitri van Heesch
+	Copyright (C) 1998-2003 by the University of Florida. All Rights Reserved
+	Copyright (C) 1998-2016 Daniel Stenberg, <daniel@haxx.se>, et al.
+	Copyright (C) 1998-2018 Third party code and tools
+	Copyright (C) 1998-2019 The OpenSSL Project. All rights reserved
+	Copyright (C) 1998-2019 Toni Ronkko
+	Copyright (C) 1999 University of North Carolina at Chapel Hill. All rights reserved
+	Copyright (C) 1999-2022 Arash Partow
+	Copyright (C) 1999-2025 Google Inc. All rights reserved
+	Copyright (C) 2000-2007 Niels Provos <provos@citi.umich.edu>
+	Copyright (C) 2000-2009 Kitware, Inc., Insight Software Consortium All rights reserved
+	Copyright (C) 2000-2017 Julian Seward. All rights reserved
+	Copyright (C) 2000-2020 Kitware, Inc. and Contributors
+	Copyright (C) 2001 Dr Martin Porter,
+	Copyright (C) 2001 Intel Corporation. Permition is granted to use, copy, distribute and prepare derivative works of this library for any purpose and without fee, provided, that the above copyright not
+	Copyright (C) 2001, 2005-2025 Intel Corporation
+	Copyright (C) 2001-2002 Enthought, Inc. 2003-2019, SciPy Developers.
+	Copyright (C) 2001-2002 Enthought, Inc. 2003-2019, SciPy Developers. All rights reserved
+	Copyright (C) 2001-2004 Idiap Research Institute (Ronan Collobert, Samy Bengio, Johnny Mariethoz)
+	Copyright (C) 2001-2004 Idiap Research Institute (Ronan Collobert, Samy Bengio, Johnny Mariethoz) From Caffe2:
+	Copyright (C) 2001-2009 Kitware, Inc.
+	Copyright (C) 2001-2020 Python Software Foundation; All Rights Reserved
+	Copyright (C) 2001-2022 Kasper Peeters <kasper@phi-sci.com>
+	Copyright (C) 20010-2011 Hauke Heibel <hauke.heibel@gmail.com>
+	Copyright (C) 2002 by Lucent Technologies. Permission to use, copy, modify, and distribute this software for any purpose without fee is hereby granted, provided that this entire notice is included in 
+	Copyright (C) 2002 Niels Provos <provos@citi.umich.edu> All rights reserved
+	Copyright (C) 2002 NVIDIA Corporation. NVIDIA Corporation("NVIDIA") supplies this software to you in consideration of your agreement to the following terms, and your use, installation, modification o
+	Copyright (C) 2002 Richard Boulton. All rights reserved
+	Copyright (C) 2002-2007 Yves Renard This file is a part of GETFEM++
+	Copyright (C) 2002-2014 AMPL Optimization LLC Permission to use, copy, modify, and distribute this software and its documentation for any purpose and without fee is hereby granted, provided that the
+	Copyright (C) 2002-2015 Nikolaus Gebhardt This software is provided 'as-is', without any express or implied warranty. In no event will the authors be held liable for any damages arising from the use o
+	Copyright (C) 2002-2016 Tiago Dionizio, Doug Currie
+	Copyright (C) 2003 Michael E. Smoot
+	Copyright (C) 2003 SKC, Inc. Permission to use, copy, modify, and distribute this software and its documentation for any purpose, without fee, and without a written agreement is hereby granted, provid
+	Copyright (C) 2003 SRA, Inc.
+	Copyright (C) 2003, 200714 Massachusetts Institute of Technology
+	Copyright (C) 2003, 200714 Matteo Frigo
+	Copyright (C) 2003-2008 Jouni Malinen <j@w1.fi> and contributors All Rights Reserved
+	Copyright (C) 2003-2009 Mark Borgerding template <typename _Scalar> struct kiss_cpx_fft
+	Copyright (C) 2003-2012 GraphicsMagick Group
+	Copyright (C) 2003-2017 Josef Weidendorfer. All rights reserved
+	Copyright (C) 2003-2017 Kepler Project"); lua_setfield(L, -2, "_COPYRIGHT"); lua_pushliteral(L, "LuaFileSystem is a Lua library developed to complement " "the set of functions related to file systems 
+	Copyright (C) 2003-2020 Kepler Project.
+	Copyright (C) 2004 by Internet Systems Consortium, Inc. ("ISC")
+	Copyright (C) 2004 Daniel Aarno
+	Copyright (C) 2004 the University Corporation for Atmospheric Research ("UCAR"). All rights reserved
+	Copyright (C) 2004, 2006 The Linux Foundation and its contributors.
+	Copyright (C) 2004, 2011-2012, 2017, 2018-2020 Intel Corporation. All rights reserved
+	Copyright (C) 2004, 2023present Facebook. All Rights Reserved
+	Copyright (C) 2004-2005 Topspin Communications. All rights reserved
+	Copyright (C) 2004-2013 Sergey Lyubka
+	Copyright (C) 2004-2013 Sergey Lyubka >
+	Copyright (C) 2004-2013 Sergey Lyubka char buf[MG_BUF_LEN], p = buf; mark_point(); ck_assert(alloc_printf(&p, sizeof(buf), "%s", "hi") == 2); ck_assert(p == buf);
+	Copyright (C) 2004-2013 Sergey Lyubka char x[] = "a=1, b=2, c='hi ' there', d='here\, there'", s = x, p; mark_point();
+	Copyright (C) 2004-2013 Sergey Lyubka ck_assert_int_eq(4, match_prefix("/api", 4, "/api")); ck_assert_int_eq(3, match_prefix("/a/", 3, "/a/b/c")); ck_assert_int_eq(-1, match_prefix("/a/", 3, "/ab/c"))
+	Copyright (C) 2004-2013 Sergey Lyubka const char p, list = "x/8,/y=1;2k,z"; struct vec a, b; int i; mark_point();
+	Copyright (C) 2004-2013 Sergey Lyubka static const char big1 = "abcdef"; mark_point(); ck_assert(mg_strcasestr("Y", "X") == NULL); ck_assert(mg_strcasestr("Y", "y") != NULL); ck_assert(mg_strcasestr(b
+	Copyright (C) 2004-2013 Sergey Lyubka struct mg_connection conn; struct mg_context ctx; char req1[] = "GET / HTTP/1.1 "; char req2[] = "GET / HTTP/1.0 "; char req3[] = "GET / HTTP/1.1 Connection: clos
+	Copyright (C) 2004-2013 Sergey Lyubka struct mg_request_info ri; struct mg_response_info respi; char empty[] = ""; char space[] = " x00"; char req1[] = "GET / HTTP/1.1 "; char req2[] = "BLAH / HTTP/1.
+	Copyright (C) 2004-2013 Sergey Lyubka struct t_test_parse_port_string { const char port_string; int valid; int ip_family; uint16_t port_num; };
+	Copyright (C) 2004-2013 Sergey Lyubka va_list ap; int ret = 0; mark_point();
+	Copyright (C) 2004-2013 Sergey Lyubka, MIT license).
+	Copyright (C) 2005 by Timothy A. Davis. All Rights Reserved
+	Copyright (C) 2005 PathScale, Inc. All rights reserved
+	Copyright (C) 2005 Robert Kern (robert.kern@gmail.com)
+	Copyright (C) 2005 the Regents of the University of Minnesota released under the terms of the GNU LGPL:
+	Copyright (C) 2005-2007 Cisco Systems, Inc. All rights reserved
+	Copyright (C) 2005-2008, 2013, 2014-2015, 2017, 2019-2020, 2025 Google Inc.
+	Copyright (C) 2005-2010 ActiveState Software Inc.
+	Copyright (C) 2005-2014 Daniel James.
+	Copyright (C) 2005-2014 G-Truc Creation (www.g-truc.net)
+	Copyright (C) 2005-2016 NVIDIA Corporation Built on Sat_Sep__3_19:05:48_CDT_2016 Cuda compilation tools, release 8.0, V8.0.44 string(REGEX MATCH "V([0-9]+)\.([0-9]+)\.([0-9]+)" CUDA_VERSION ${NVCC_OUT
+	Copyright (C) 2005-2017 G-Truc Creation
+	Copyright (C) 2005-2017 NumPy Developers.
+	Copyright (C) 2005-2017 NumPy Developers. All rights reserved
+	Copyright (C) 2005-2020 Rich Felker, et al.
+	Copyright (C) 2006 Idiap Research Institute (Samy Bengio)
+	Copyright (C) 2006 Timothy A. Davis.
+	Copyright (C) 2006, 2012, 2017 The Android Open Source Project
+	Copyright (C) 2006-2007 Montel Laurent, <montel@kde.org>
+	Copyright (C) 2006-2008 Diego Petten
+	Copyright (C) 2006-2008 xine project
+	Copyright (C) 2006-2010 NEC Laboratories America (Ronan Collobert, Leon Bottou, Iain Melvin, Jason Weston)
+	Copyright (C) 2006-2011 Benoit Jacob <jacob.benoit.1@gmail.com>
+	Copyright (C) 2006-2023 SymPy Development Team
+	Copyright (C) 2007 Alexander Neundorf, <neundorf@kde.org>
+	Copyright (C) 2007 Allen Winter, <winter@kde.org>
+	Copyright (C) 2007 Ariel Flesler - aflesler
+	Copyright (C) 2007 David M. Gay Permission to use, copy, modify, and distribute this software and its documentation for any purpose and without fee is hereby granted, provided that the above copyright
+	Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>
+	Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
+	Copyright (C) 2007 Julien Pommier
+	Copyright (C) 2007 Michael Olbrich <michael.olbrich@gmx.net>
+	Copyright (C) 2007 MITSUNARI Shigeo All rights reserved
+	Copyright (C) 2007 Neal Norwitz
+	Copyright (C) 2007, 2018 Google, Inc. All Rights Reserved
+	Copyright (C) 2007-2008 Miguel A. Figueroa-Villanueva <miguelf at ieee dot org>
+	Copyright (C) 2007-2010 Baptiste Lepilleur and The JsonCpp Authors
+	Copyright (C) 2007-2010 by Baptiste Lepilleur, and is
+	Copyright (C) 2007-2011 Baptiste Lepilleur
+	Copyright (C) 2007-2012 Niels Provos and Nick Mathewson Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: 1
+	Copyright (C) 2007-2012 University of Illinois at Urbana-Champaign. All rights reserved
+	Copyright (C) 2007-2013 Gerald Franz, eludi.net
+	Copyright (C) 2008 Benjamin Kosnik <bkoz@redhat.com>
+	Copyright (C) 2008 Daniel Gomez Ferro <dgomezferro@gmail.com>
+	Copyright (C) 2008 Gael Guennebaud <g.gael@free.fr>=====================================================
+	Copyright (C) 2008 Gael Guennebaud <gael.guennebaud@inria.fr> Adapted from FindEigen.cmake:
+	Copyright (C) 2008 Gael Guennebaud <gael.guennebaud@inria.fr> NOTE The functions of this file have been adapted from the GMM++ library
+	Copyright (C) 2008 Gael Guennebaud <gael.guennebaud@inria.fr>=====================================================
+	Copyright (C) 2008 Google Inc. https://developers.google.com/protocol-buffers/
+	Copyright (C) 2008 Google Inc. https://developers.google.com/protocol-buffers/ This package contains a precompiled binary version of the protocol buffer compiler (protoc). This binary is intended for user
+	Copyright (C) 2008 Google Inc. This directory contains conformance tests for testing completeness and correctness of Protocol Buffers implementations. These tests are designed to be easy to run against an
+	Copyright (C) 2008 Google Inc. This directory contains the JavaScript Protocol Buffers runtime library.
+	Copyright (C) 2008 Google Inc. This directory contains the Objective C Protocol Buffers runtime library.
+	Copyright (C) 2008 Google Inc. This directory contains the Python Protocol Buffers runtime library.
+	Copyright (C) 2008 Paolo Bonzini <bonzini@gnu.org>
+	Copyright (C) 2008 Paolo Bonzini <bonzini@gnu.org> Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and th
+	Copyright (C) 2008 Steven G. Johnson <stevenj@alum.mit.edu>
+	Copyright (C) 2008-2009 Bjoern Hoehrmann <bjoern@hoehrmann.de>
+	Copyright (C) 2008-2009 Gael Guennebaud <gael.guennebaud@inria.fr> NOTE The class IterationController has been adapted from the iteration class of the GMM++ and ITL libraries.
+	Copyright (C) 2008-2009 Gael Guennebaud, <g.gael@free.fr>
+	Copyright (C) 2008-2009 Guillaume Saupin <guillaume.saupin@cea.fr>
+	Copyright (C) 2008-2011 Gael Guennebaud <g.gael@free.fr>
+	Copyright (C) 2008-2015 Jesse Beder.
+	Copyright (C) 2008-2016 Konstantinos Margaritis <markos@freevec.org>
+	Copyright (C) 2008-2019 Gael Guennebaud <gael.guennebaud@inria.fr>
+	Copyright (C) 2008-2025 The AsmJit Authors
+	Copyright (C) 2008-2025 The AsmJit Authors This software is provided 'as-is', without any express or implied warranty. In no event will the authors be held liable for any damages arising from the use 
+	Copyright (C) 2009 Benjamin Schindler <bschindler@inf.ethz.ch>
+	Copyright (C) 2009 Boudewijn Rempt <boud@valdyas.org>
+	Copyright (C) 2009 Claire Maurice
+	Copyright (C) 2009 Dave Gamble
+	Copyright (C) 2009 Florian Loitsch.
+	Copyright (C) 2009 Florian Loitsch. For a detailed description of the algorithm see:
+	Copyright (C) 2009 Google Inc. Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: Redistributions of source 
+	Copyright (C) 2009 Hauke Heibel <hauke.heibel@googlemail.com>
+	Copyright (C) 2009 Ilya Baran <ibaran@mit.edu>
+	Copyright (C) 2009 Kenneth Riddile <kfriddile@yahoo.com>
+	Copyright (C) 2009 Mark Borgerding mark a borgerding net
+	Copyright (C) 2009 Mathieu Gautier <mathieu.gautier@cea.fr>
+	Copyright (C) 2009 Neal Norwitz All Rights Reserved
+	Copyright (C) 2009 Petri Lehtinen <petri@digip.org>
+	Copyright (C) 2009 Ricard Marxer <email@ricardmarxer.com>
+	Copyright (C) 2009 Rohit Garg <rpg.314@gmail.com>
+	Copyright (C) 2009 Thomas Capricelli <orzel@freehackers.org> include <stdio.h>
+	Copyright (C) 2009 Thomas Capricelli <orzel@freehackers.org> This code initially comes from MINPACK whose original authors are:
+	Copyright (C) 2009, 2012 Keir Mierle <mierle@gmail.com>
+	Copyright (C) 2009-2010 Thomas Capricelli <orzel@freehackers.org>
+	Copyright (C) 2009-2013 Hauke Heibel <hauke.heibel@gmail.com>
+	Copyright (C) 2009-2013 Jitse Niesen <jitse@maths.leeds.ac.uk>
+	Copyright (C) 2009-2014 The University of Tennessee and The University of Tennessee Research Foundation. All rights reserved
+	Copyright (C) 2009-2017 Dave Gamble and cJSON contributors
+	Copyright (C) 2010 "Cowboy" Ben Alman
+	Copyright (C) 2010 Daniel Lowengrub <lowdanie@gmail.com>
+	Copyright (C) 2010 Intel Corp. All rights reserved
+	Copyright (C) 2010 Jitse Niesen, <jitse@maths.leeds.ac.uk>
+	Copyright (C) 2010 Jonathan Hartley <tartley@tartley.com>
+	Copyright (C) 2010 Manuel Yguel <manuel.yguel@gmail.com>
+	Copyright (C) 2010 Vincent Lejeune
+	Copyright (C) 2010-2011 Hauke Heibel <heibel@gmail.com>
+	Copyright (C) 2010-2012 Marat Dukhan All rights reserved
+	Copyright (C) 2010-2014 Rich Geldreich and Tenacious Software LLC
+	Copyright (C) 2010-2014 Rich Geldreich and Tenacious Software LLC All Rights Reserved
+	Copyright (C) 2010-2018 Max-Planck-Society All rights reserved
+	Copyright (C) 2010-2022 by Alex Clark and contributors
+	Copyright (C) 2010-2024 Max-Planck-Society
+	Copyright (C) 2010-2025 SLEEF Project, Naoki Shibata and contributors.<br/>
+	Copyright (C) 2011 Andreas Platen <andiplaten@gmx.de>
+	Copyright (C) 2011 AUTHORS.txt (http://jqueryui.com/about)
+	Copyright (C) 2011 Daniel Richard G. <skunk@iSKUNK.ORG>
+	Copyright (C) 2011 Intel Corporation All rights reserved
+	Copyright (C) 2011 John Resig
+	Copyright (C) 2011 Kolja Brix <brix@igpm.rwth-aachen.de>
+	Copyright (C) 2011 The Dojo Foundation
+	Copyright (C) 2011 Timothy E. Holy <tim.holy@gmail.com >
+	Copyright (C) 2011-2012 NEC Laboratories America (Koray Kavukcuoglu)
+	Copyright (C) 2011-2013 Chen-Pang He <jdh8@ms63.hinet.net>
+	Copyright (C) 2011-2013 NYU (Clement Farabet)
+	Copyright (C) 2011-2014 Idiap Research Institute (Ronan Collobert)
+	Copyright (C) 2011-2014 Willow Garage, Inc.
+	Copyright (C) 2011-2015 Twitter, Inc.
+	Copyright (C) 2011-2019 Stephan Brumme. All rights reserved
+	Copyright (C) 2011-2024 The Bootstrap Authors
+	Copyright (C) 2011-2024 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+	Copyright (C) 2012 - present, Victor Zverovich and
+	Copyright (C) 2012 - present, Victor Zverovich import os from pathlib import Path from typing import Any, List, Mapping, Optional from subprocess import CalledProcessError, PIPE, Popen, STDOUT import 
+	Copyright (C) 2012 Alexey Korepanov <kaikaikai@yandex.ru>
+	Copyright (C) 2012 Avionic Design GmbH Based on the AX_PROG_CC_FOR_BUILD macro by Paolo Bonzini.
+	Copyright (C) 2012 Cedric Castagnede
+	Copyright (C) 2012 Continuum Analytics, Inc.
+	Copyright (C) 2012 Continuum Analytics, Inc. All rights reserved
+	Copyright (C) 2012 David Harmon <dharmon@gmail.com>
+	Copyright (C) 2012 desire Nuentsa <desire.nuentsa_wakam@inria.fr
+	Copyright (C) 2012 Desire Nuentsa <desire.nuentsa_wakam@inria.fr> The algorithm of this class initially comes from MINPACK whose original authors are:
+	Copyright (C) 2012 Desire Nuentsa <desire.nuentsa_wakam@inria.fr> This code initially comes from MINPACK whose original authors are:
+	Copyright (C) 2012 Desire NUENTSA WAKAM <desire.nuentsa_wakam@inria.fr
+	Copyright (C) 2012 Desire Nuentsa Wakam <desire.nuentsa_wakam@inria.fr>
+	Copyright (C) 2012 Erik Edlund <erik.edlund@32767.se> Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: Re
+	Copyright (C) 2012 Giacomo Po <gpo@ucla.edu>
+	Copyright (C) 2012 Giovanni Garberoglio
+	Copyright (C) 2012 Giovanni Garberoglio Interdisciplinary Laboratory for Computational Science (LISC) Fondazione Bruno Kessler and University of Trento via Sommarive, 18 I-38123 Trento (Italy) This so
+	Copyright (C) 2012 LunarG, Inc.All rights reserved
+	Copyright (C) 2012 Massachusetts Institute of Technology
+	Copyright (C) 2012 Zack Weinberg <zackw@panix.com>
+	Copyright (C) 2012, 2014 Kolja Brix <brix@igpm.rwth-aaachen.de>
+	Copyright (C) 2012, 2018 - present, Victor Zverovich and fmt contributors
+	Copyright (C) 2012, 2019 - present, Victor Zverovich
+	Copyright (C) 2012-2013 Christian Rau <rauy@users.sourceforge.net>
+	Copyright (C) 2012-2013 D
+	Copyright (C) 2012-2013 Desire Nuentsa <desire.nuentsa_wakam@inria.fr>
+	Copyright (C) 2012-2013 Emmanuel Agullo
+	Copyright (C) 2012-2013 Inria
+	Copyright (C) 2012-2013 Mathieu Faverge
+	Copyright (C) 2012-2014 Bordeaux INP, CNRS (LaBRI UMR 5800), Inria, Univ. Bordeaux. All rights reserved
+	Copyright (C) 2012-2014 Deepmind Technologies (Koray Kavukcuoglu)
+	Copyright (C) 2012-2016 Inria. All rights reserved
+	Copyright (C) 2012-2016 Victor Zverovich
+	Copyright (C) 2012-2016 Yann Collet
+	Copyright (C) 2012-2017 Georgia Institute of Technology
+	Copyright (C) 201222 SAURAV MOHAPATRA <mohaps@gmail.com>
+	Copyright (C) 20123 - 2024 NVIDIA CORPORATION
+	Copyright (C) 2013 Christian Seiler <christian@iwakd.de>
+	Copyright (C) 2013 Christoph Hertzberg <chtz@informatik.uni-bremen.de>
+	Copyright (C) 2013 Dariusz Dwornikowski. All rights reserved
+	Copyright (C) 2013 Eddy Petri
+	Copyright (C) 2013 F-Secure Corporation
+	Copyright (C) 2013 Gauthier Brun <brun.gauthier@gmail.com>
+	Copyright (C) 2013 Jean Ceccato <jean.ceccato@ensimag.fr>
+	Copyright (C) 2013 Julien Pommier ( pommier@modartt.com ) Based on original fortran 77 code from FFTPACKv4 from NETLIB (http://www.netlib.org/fftpack), authored by Dr Paul Swarztrauber of NCAR, in 198
+	Copyright (C) 2013 Mark Dickinson
+	Copyright (C) 2013 Nicolas Carre <nicolas.carre@ensimag.fr>
+	Copyright (C) 2013 No Face Press, LLC
+	Copyright (C) 2013 No Face Press, LLC (Thomas Davis) >
+	Copyright (C) 2013 Pavel Holoborodko <pavel@holoborodko.com>
+	Copyright (C) 2013 Pierre Zoppitelli <pierre.zoppitelli@ensimag.fr>
+	Copyright (C) 2013 Roy Stogner <roystgnr@ices.utexas.edu>
+	Copyright (C) 2013 Suffick at Codepen (http://codepen.io/suffick) and GitHub (https://github.com/suffick)
+	Copyright (C) 2013 Vladimir Keleshev, vladimir@keleshev.com
+	Copyright (C) 2013, 2018 Steven Benner (http://stevenbenner.com/).
+	Copyright (C) 2013-2014 RAD Game Tools and Valve Software
+	Copyright (C) 2013-2015 Ben Noordhuis <info@bnoordhuis.nl> Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above c
+	Copyright (C) 2013-2016 Duktape authors (see AUTHORS.rst in the Duktape distributable)</_3:copyrightText>
+	Copyright (C) 2013-2016 Duktape authors (see AUTHORS.rst in the Duktape distributable)</_3:copyrightText> <_3:checksum rdf:nodeID="svBMzJkP154"/> <rdf:type rdf:resource="http://spdx.org/rdf/termsFile"/> <
+	Copyright (C) 2013-2016 Florent Pruvost
+	Copyright (C) 2013-2017 by Duktape authors (see AUTHORS.rst)
+	Copyright (C) 2013-2017 Duktape authors (see AUTHORS.rst in the Duktape distributable)</ns1:copyrightText>
+	Copyright (C) 2013-2017 Duktape authors (see AUTHORS.rst in the Duktape distributable)</ns1:copyrightText> </rdf:Description> <rdf:Description rdf:nodeID="N1ebf57297e664f6c996c6dc9fa13eec8"> <ns1:checksum
+	Copyright (C) 2013-2017 Duktape authors (see AUTHORS.rst in the Duktape distributable)</ns1:copyrightText> </rdf:Description> <rdf:Description rdf:nodeID="N2e4774aac22f42f4ab75186dd55e760f"> <rdf:type rdf
+	Copyright (C) 2013-2017 Duktape authors (see AUTHORS.rst in the Duktape distributable)</ns1:copyrightText> </rdf:Description> <rdf:Description rdf:nodeID="N3d65345a7cc74ef085118b413f56cbf6">
+	Copyright (C) 2013-2017 Duktape authors (see AUTHORS.rst in the Duktape distributable)</ns1:copyrightText> </rdf:Description> <rdf:Description rdf:nodeID="N7422fcdb128046ed9549bcc1b53af0e0"> <rdf:type rdf
+	Copyright (C) 2013-2017 Duktape authors (see AUTHORS.rst in the Duktape distributable)</ns1:copyrightText> </rdf:Description> <rdf:Description rdf:nodeID="N7babdf7e87a449a08487c5a86e13b4ea">
+	Copyright (C) 2013-2017 Duktape authors (see AUTHORS.rst in the Duktape distributable)</ns1:copyrightText> </rdf:Description> <rdf:Description rdf:nodeID="Nb19f011a15104c3084b27d4848116341"> <ns1:checksum
+	Copyright (C) 2013-2017 Duktape authors (see AUTHORS.rst in the Duktape distributable)</ns1:copyrightText> </rdf:Description> <rdf:Description rdf:nodeID="Nb7e97a375c814773846f140695dc2de4"> <rdf:type rdf
+	Copyright (C) 2013-2017 Duktape authors (see AUTHORS.rst in the Duktape distributable)</ns1:copyrightText> </rdf:Description> <rdf:Description rdf:nodeID="Nbe138ac3064f47b982ebaaeda0173f61"> <rdf:type rdf
+	Copyright (C) 2013-2017 Duktape authors (see AUTHORS.rst in the Duktape distributable)</ns1:copyrightText> <ns1:checksum rdf:nodeID="N6850c845ad19464da3fe97e1d22fb4d4"/> </rdf:Description> <rdf:Descriptio
+	Copyright (C) 2013-2017 Duktape authors (see AUTHORS.rst in the Duktape distributable)</ns1:copyrightText> <ns1:checksum rdf:nodeID="Nb37b5ea774e34ab288d20c4889711a43"/> <rdf:type rdf:resource="http://spd
+	Copyright (C) 2013-2017 Duktape authors (see AUTHORS.rst in the Duktape distributable)</ns1:copyrightText> <ns1:checksum rdf:nodeID="Nb5e5d4a64fe746b492c57a7c03e2724e"/> </rdf:Description> <rdf:Descriptio
+	Copyright (C) 2013-2017 Duktape authors (see AUTHORS.rst in the Duktape distributable)</ns1:copyrightText> <ns1:checksum rdf:nodeID="Nb9efef99775c49b8b7c0a457868e0e17"/> </rdf:Description> <rdf:Descriptio
+	Copyright (C) 2013-2017 Duktape authors (see AUTHORS.rst in the Duktape distributable)</ns1:copyrightText> <ns1:checksum rdf:nodeID="Nce865c7644b446b8bfd2411aeaac00ea"/> </rdf:Description> <rdf:Descriptio
+	Copyright (C) 2013-2017 Duktape authors (see AUTHORS.rst in the Duktape distributable)</ns1:copyrightText> <ns1:checksum rdf:nodeID="Nd14c9df158a940db99636722e0e8031c"/> <ns1:fileType rdf:resource="http:/
+	Copyright (C) 2013-2017 Duktape authors (see AUTHORS.rst in the Duktape distributable)</ns1:copyrightText> <ns1:checksum rdf:nodeID="Nfa0b8a46def2407ab85f84b06d96bff2"/> <rdf:type rdf:resource="http://spd
+	Copyright (C) 2013-2017 Duktape authors (see AUTHORS.rst in the Duktape distributable)</ns1:copyrightText> <ns1:fileName>./examples/debug-trans-dvalue/test.c</ns1:fileName> <rdf:type rdf:resource="http://
+	Copyright (C) 2013-2017 Duktape authors (see AUTHORS.rst in the Duktape distributable)</ns1:copyrightText> <ns1:fileName>./examples/eval/eval.c</ns1:fileName> <ns1:fileType rdf:resource="http://spdx.org/r
+	Copyright (C) 2013-2017 Duktape authors (see AUTHORS.rst in the Duktape distributable)</ns1:copyrightText> <ns1:fileName>./src-separate/duk_alloc_default.c</ns1:fileName> <rdf:type rdf:resource="http://sp
+	Copyright (C) 2013-2017 Duktape authors (see AUTHORS.rst in the Duktape distributable)</ns1:copyrightText> <ns1:fileName>./src-separate/duk_bi_number.c</ns1:fileName> </rdf:Description> <rdf:Description r
+	Copyright (C) 2013-2017 Duktape authors (see AUTHORS.rst in the Duktape distributable)</ns1:copyrightText> <ns1:fileName>./src-separate/duk_bi_object.c</ns1:fileName> <ns1:checksum rdf:nodeID="N06c44d4442
+	Copyright (C) 2013-2017 Duktape authors (see AUTHORS.rst in the Duktape distributable)</ns1:copyrightText> <ns1:fileName>./src-separate/duk_error_macros.c</ns1:fileName> <rdf:type rdf:resource="http://spd
+	Copyright (C) 2013-2017 Duktape authors (see AUTHORS.rst in the Duktape distributable)</ns1:copyrightText> <ns1:fileName>./src-separate/duk_util_bitdecoder.c</ns1:fileName> <ns1:checksum rdf:nodeID="N7afa
+	Copyright (C) 2013-2017 Duktape authors (see AUTHORS.rst in the Duktape distributable)</ns1:copyrightText> <ns1:fileType rdf:resource="http://spdx.org/rdf/termsfileType_other"/> </rdf:Description> <rdf:De
+	Copyright (C) 2013-2017 Duktape authors (see AUTHORS.rst in the Duktape distributable)</ns1:copyrightText> <ns1:fileType rdf:resource="http://spdx.org/rdf/termsfileType_source"/> </rdf:Description> <rdf:D
+	Copyright (C) 2013-2017 Duktape authors (see AUTHORS.rst in the Duktape distributable)</ns1:copyrightText> <ns1:fileType rdf:resource="http://spdx.org/rdf/termsfileType_source"/> <ns1:checksum rdf:nodeID=
+	Copyright (C) 2013-2017 Duktape authors (see AUTHORS.rst in the Duktape distributable)</ns1:copyrightText> <ns1:fileType rdf:resource="http://spdx.org/rdf/termsfileType_source"/> <ns1:fileName>./src-separ
+	Copyright (C) 2013-2017 Duktape authors (see AUTHORS.rst in the Duktape distributable)</ns1:copyrightText> <ns1:fileType rdf:resource="http://spdx.org/rdf/termsfileType_source"/> <rdf:type rdf:resource="h
+	Copyright (C) 2013-2017 Duktape authors (see AUTHORS.rst in the Duktape distributable)</ns1:copyrightText> <rdf:type rdf:resource="http://spdx.org/rdf/termsFile"/> <ns1:fileType rdf:resource="http://spdx.
+	Copyright (C) 2013-2017 Georgia Institute of Technology All rights reserved
+	Copyright (C) 2013-2020 Cameron Desrochers.
+	Copyright (C) 2013-2020 Cameron Desrochers. All rights reserved
+	Copyright (C) 2013-2021 the Civetweb developers
+	Copyright (C) 2013-2021 The CivetWeb developers ( >
+	Copyright (C) 2013-2021 the CivetWeb developers, MIT license). A list of authors can be found in [CREDITS.md](https://github.com/civetweb/civetweb/blob/master/CREDITS.md).
+	Copyright (C) 2013-2022 Niels Lohmann <http://nlohmann.me>.
+	Copyright (C) 2013-2022 Niels Lohmann"); CHECK(j["url"] == "https://github.com/nlohmann/json"); CHECK(j["version"] == json( { {"string", "3.10.5"}, {"major", 3}, {"minor", 10}, {"patch", 5}
+	Copyright (C) 2013-2022 Niels Lohmann"); CHECK(j["url"] == "https://github.com/nlohmann/json"); CHECK(j["version"] == json( { {"string", "3.11.2"}, {"major", 3}, {"minor", 11}, {"patch", 2}
+	Copyright (C) 2013-2022 Niels Lohmann"; result["name"] = "JSON for Modern C++"; result["url"] = "https://github.com/nlohmann/json"; result["version"]["string"] = std::to_string(NLOHMANN_JSON_VERSION_MAJOR) + ".
+	Copyright (C) 2013-2023 Niels Lohmann
+	Copyright (C) 2013-2023 Niels Lohmann"); CHECK(j["url"] == "https://github.com/nlohmann/json"); CHECK(j["version"] == json( { {"string", "3.11.3"}, {"major", 3}, {"minor", 11}, {"patch", 3}
+	Copyright (C) 2013-2025 Niels Lohmann"); CHECK(j["url"] == "https://github.com/nlohmann/json"); CHECK(j["version"] == json( { {"string", "3.12.0"}, {"major", 3}, {"minor", 12}, {"patch", 0}
+	Copyright (C) 2013-2025 Niels Lohmann"; result["name"] = "JSON for Modern C++"; result["url"] = "https://github.com/nlohmann/json"; result["version"]["string"] = detail::concat(std::to_string(NLOHMANN_JSON_VERS
+	Copyright (C) 2014 Benoit Steiner <benoit.steiner.goog@gmail.com>=====================================================
+	Copyright (C) 2014 Crytek
+	Copyright (C) 2014 Eric Martin <eric@ericmart.in>
+	Copyright (C) 2014 Facebook, Inc (Soumith Chintala)
+	Copyright (C) 2014 Google Inc") [assembly: AssemblyTrademark("")] [assembly: AssemblyCulture("")] Setting ComVisible to false makes the types in this assembly not visible to COM components. If you nee
+	Copyright (C) 2014 Indiana University
+	Copyright (C) 2014 joseph werle <joseph.werle@gmail.com>
+	Copyright (C) 2014 Matthew Rocklin
+	Copyright (C) 2014 Matthew Rocklin All rights reserved
+	Copyright (C) 2014 Navdeep Jaitly <ndjaitly@google.com and
+	Copyright (C) 2014 Stefan.Eilemann@epfl.ch
+	Copyright (C) 2014 The Regents of the University of California (Regents)
+	Copyright (C) 2014 The Regents of the University of California (Regents) All rights reserved
+	Copyright (C) 2014 the respective contributors
+	Copyright (C) 2014 the respective contributors All rights reserved
+	Copyright (C) 2014 yoco <peter.xiau@gmail.com>
+	Copyright (C) 2014 Yubico AB All rights reserved
+	Copyright (C) 2014, 2016 Benoit Steiner (benoit.steiner.goog@gmail.com)
+	Copyright (C) 2014, 2016 Pedro Gonnet (pedro.gonnet@gmail.com)
+	Copyright (C) 2014-2015 Google Inc.; contributed by Alexey Sokolov <sokolov@google.com>
+	Copyright (C) 2014-2015 Jianwei Cui <thucjw@gmail.com>
+	Copyright (C) 2014-2015 Navdeep Jaitly <ndjaitly@google.com>
+	Copyright (C) 2014-2015 Open Source Robotics Foundation All rights reserved
+	Copyright (C) 2014-2016 Rodrigo Fernandes https://rtfpessoa.github.io/
+	Copyright (C) 2014-2017 Benoit Steiner <benoit.steiner.goog@gmail.com>
+	Copyright (C) 2014-2017 ipkn 2020-2022, CrowCpp All rights reserved
+	Copyright (C) 2015 Aurelien Rainone
+	Copyright (C) 2015 Benoit Jacob <benoitjacob@google.com>
+	Copyright (C) 2015 Eugene Brevdo <ebrevdo@google.com>
+	Copyright (C) 2015 Gael Guennebaud <gael.guennebaud@inria.fr> Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are 
+	Copyright (C) 2015 gRPC authors.
+	Copyright (C) 2015 Jeff Preshing
+	Copyright (C) 2015 Jeff Preshing This software is provided 'as-is', without any express or implied warranty. In no event will the authors be held liable for any damages arising from the use of this so
+	Copyright (C) 2015 Ke Yang <yangke@gmail.com>
+	Copyright (C) 2015 Martin Moene
+	Copyright (C) 2015 Melissa E. O
+	Copyright (C) 2015 Micha Mettke This software is provided 'as-is', without any express or implied warranty. In no event will the authors be held liable for any damages arising from the use of this sof
+	Copyright (C) 2015 Microsoft Corporation. All rights reserved
+	Copyright (C) 2015 Moritz Klammler <moritz@klammler.eu>
+	Copyright (C) 2015 Paul Norman <penorman@mac.com>
+	Copyright (C) 2015 petewarden. All rights reserved
+	Copyright (C) 2015 Sa
+	Copyright (C) 2015 Tal Hadad <tal_hd@hotmail.com>
+	Copyright (C) 2015 The Chromium Authors. All rights reserved
+	Copyright (C) 2015 the original author or authors.
+	Copyright (C) 2015 Vijay Vasudevan <vrv@google.com>
+	Copyright (C) 2015 Wenzel Jakob <wenzel@inf.ethz.ch>
+	Copyright (C) 2015 Yangqing Jia
+	Copyright (C) 2015 Yangqing Jia All rights reserved
+	Copyright (C) 2015, 2017 The TensorFlow Authors. All Rights Reserved
+	Copyright (C) 2015-2016 Eugene Brevdo <ebrevdo@gmail.com>
+	Copyright (C) 2015-2016 LunarG, Inc.
+	Copyright (C) 2015-2016 The Khronos Group Inc.
+	Copyright (C) 2015-2016 Valve Corporation
+	Copyright (C) 2015-2017 Niels Lohmann.
+	Copyright (C) 2015-2018 Baldur Karlsson
+	Copyright (C) 2015-2018 Google, Inc.
+	Copyright (C) 2015-2018 The Gemmlowp Authors. All Rights Reserved
+	Copyright (C) 2015-2020 the CivetWeb developers This file contains test code for fuzz tests. It should not be used in production code.
+	Copyright (C) 2015-2023 Norbert Juffa
+	Copyright (C) 2015-2025 Advanced Micro Devices, Inc. All rights reserved
+	Copyright (C) 2015present libuv project contributors.
+	Copyright (C) 2016 Andreas Fredriksson, Micha Mettke All rights reserved
+	Copyright (C) 2016 Ben North <ben@redfrontdoor.org>
+	Copyright (C) 2016 Dmitry Vyukov <dvyukov@google.com>
+	Copyright (C) 2016 Doug Binks
+	Copyright (C) 2016 ExplosionAI GmbH, 2014-2015 Matthew Honnibal, 2016 spaCy
+	Copyright (C) 2016 Facebook Inc. All contributions by Google:
+	Copyright (C) 2016 Facebook, Inc (Adam Paszke)
+	Copyright (C) 2016 Igor Babuschkin <igor@babuschk.in>
+	Copyright (C) 2016 Ismael Jimenez Martinez. All rights reserved
+	Copyright (C) 2016 Ivan Smirnov
+	Copyright (C) 2016 Ivan Smirnov <i.s.smirnov@gmail.com>
+	Copyright (C) 2016 Klemens D. Morgenstern
+	Copyright (C) 2016 Klemens Morgenstern <klemens.morgenstern@ed-chemnitz.de> and
+	Copyright (C) 2016 Krzesimir Nowak <qdlacz@gmail.com> Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and
+	Copyright (C) 2016 manylinux
+	Copyright (C) 2016 Martin Moene. This version targets C++11 and later.
+	Copyright (C) 2016 Martin Raiber
+	Copyright (C) 2016 Mehdi Goli, Codeplay Software Ltd <eigen@codeplay.com>
+	Copyright (C) 2016 Micha Mettke
+	Copyright (C) 2016 Pim Schellart <P.Schellart@princeton.edu>
+	Copyright (C) 2016 Rasmus Munk Larsen (rmlarsen@google.com)
+	Copyright (C) 2016 Sergey Lyskov
+	Copyright (C) 2016 Sergey Lyskov and Wenzel Jakob
+	Copyright (C) 2016 Tobias Wood <tobias@spinicist.org.uk>
+	Copyright (C) 2016 Trent Houliston <trent@houliston.me>
+	Copyright (C) 2016 Trent Houliston <trent@houliston.me> and
+	Copyright (C) 2016 Ville Timonen All rights reserved
+	Copyright (C) 2016 Wenzel Jakob <wenzel.jakob@epfl.ch>, All rights reserved
+	Copyright (C) 2016, 2018-2019 Rasmus Munk Larsen <rmlarsen@google.com>
+	Copyright (C) 2016-2017 Jason Rhinelander <jason@imaginary.ca>
+	Copyright (C) 2016-2017 Lyft Inc.
+	Copyright (C) 2016-2017, 2020 Wenzel Jakob <wenzel.jakob@epfl.ch>
+	Copyright (C) 2016-2018 Codeplay Software Ltd.
+	Copyright (C) 2016-2018 Facebook Inc.
+	Copyright (C) 2016-2018 Marat Dukhan
+	Copyright (C) 2016-2019 Michele Caini
+	Copyright (C) 2016-2021 Jupp Mueller
+	Copyright (C) 2016-2021present, Facebook, Inc.
+	Copyright (C) 2016-2023 Viktor Kirilov
+	Copyright (C) 2016-2025 The Pybind Development Team.
+	Copyright (C) 2016present, Facebook Inc. All rights reserved
+	Copyright (C) 2017 - Refael Ackermann
+	Copyright (C) 2017 Borja Zarco (Google LLC) <bzarco@google.com>
+	Copyright (C) 2017 by Contributors
+	Copyright (C) 2017 Gagan Goel <gagan.nith@gmail.com>
+	Copyright (C) 2017 Henry F. Schreiner
+	Copyright (C) 2017 Kyle Macfarlan <kyle.macfarlan@gmail.com>
+	Copyright (C) 2017 OpenCensus Authors
+	Copyright (C) 2017 Roman Lebedev. All rights reserved
+	Copyright (C) 2017 The Khronos Group Inc.,
+	Copyright (C) 2017 Viktor Csomor <viktor.csomor@gmail.com>
+	Copyright (C) 2017 yhirose
+	Copyright (C) 2017, 2020-2025 Codeplay Software Limited
+	Copyright (C) 2017, 2022 Two Blue Cubes Ltd. All rights reserved
+	Copyright (C) 2017-2019 The Abseil Authors.
+	Copyright (C) 2017-2019 The Native Object Protocols Authors
+	Copyright (C) 2017-2021 Huu Nguyen
+	Copyright (C) 2017-2022 Gregor Jasny And many contributors, see https://github.com/jupp0r/prometheus-cpp/graphs/contributors
+	Copyright (C) 2017-2024 Advanced Micro Devices, Inc.
+	Copyright (C) 2017present, Facebook, Inc. All rights reserved
+	Copyright (C) 2018 , Advanced Micro Devices, Inc. (Chao Liu, Jing Zhang)
+	Copyright (C) 2018 - present, Remotion (Igor Schulz) All Rights Reserved
+	Copyright (C) 2018 Alex Rogozhnikov
+	Copyright (C) 2018 Andy Davis <andydavis@google.com>
+	Copyright (C) 2018 Dan Field
+	Copyright (C) 2018 Dan Field. All rights reserved
+	Copyright (C) 2018 David Hyde <dabh@stanford.edu>
+	Copyright (C) 2018 Deven Desai <deven.desai.amd@gmail.com>
+	Copyright (C) 2018 Eugene Zhulenev <ezhulenev@google.com>
+	Copyright (C) 2018 Hudson River Trading LLC <opensource@hudson-trading.com>
+	Copyright (C) 2018 Intel Corporation.
+	Copyright (C) 2018 MathInf GmbH, Thomas Viehmann
+	Copyright (C) 2018 Mehdi Goli <eigen@codeplay.com> Codeplay Software Ltd.
+	Copyright (C) 2018 Steven Moshier
+	Copyright (C) 2018 Steven Moshier All rights reserved
+	Copyright (C) 2018 Vitaliy Manushkin <agri@akamo.info>.
+	Copyright (C) 2018 Wave Computing, Inc. Written by:
+	Copyright (C) 2018 YANDEX LLC
+	Copyright (C) 2018-2019, 2023 Google LLC. All rights reserved
+	Copyright (C) 2018-2025 Microsoft Corporation, Daan Leijen
+	Copyright (C) 2018-2025 Microsoft Research, Daan Leijen
+	Copyright (C) 2018-2025 Microsoft Research, Daan Leijen, Alon Zakai
+	Copyright (C) 2019 , Advanced Micro Devices, Inc. (Letao Qin, Qianfeng Zhang, Liang Huang, Shaojie Wang)
+	Copyright (C) 2019 Chris Ferdinandi
+	Copyright (C) 2019 David Tellenbach <david.tellenbach@tellnotes.org>
+	Copyright (C) 2019 Google LLC Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: Redistributions of source code 
+	Copyright (C) 2019 Joel Holdsworth <joel.holdsworth@vcatechnology.com>
+	Copyright (C) 2019 NumPy Developers
+	Copyright (C) 2019 Roland Dreier <roland.dreier@gmail.com>
+	Copyright (C) 2019 rxi
+	Copyright (C) 2019, 2021 Paul Dreik
+	Copyright (C) 2019, 2025 Yuji Hirose. All rights reserved
+	Copyright (C) 2019-2020 Advanced Micro Devices, Inc. (Tejash Shah)
+	Copyright (C) 2019-2020 by Martin Vorbrodt <martin@vorbrodt.blog> Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted.
+	Copyright (C) 2019-2020 Kakao Brain
+	Copyright (C) 2019-2020 Kakao Brain All contributions by Cruise LLC:
+	Copyright (C) 2019-2020 Kakao Brain All other contributions:
+	Copyright (C) 2019-2020 Peter Bell For the odd-sized DCT-IV transforms:
+	Copyright (C) 2019-2021 Advanced Micro Devices, Inc. (Hanwen Chang)
+	Copyright (C) 2019-2024 FUJITSU LIMITED
+	Copyright (C) 2019-2024 Google LLC
+	Copyright (C) 2020 , Advanced Micro Devices, Inc. (Xiaoyan Zhou)
+	Copyright (C) 2020 Antonio Sanchez <cantonios@google.com>
+	Copyright (C) 2020 Arm Limited and Contributors
+	Copyright (C) 2020 Chris Schoutrop <c.e.m.schoutrop@tue.nl>
+	Copyright (C) 2020 Everton Constantino (everton.constantino@ibm.com)
+	Copyright (C) 2020 Everton Constantino <everton.constantino@ibm.com>
+	Copyright (C) 2020 Jan Tojnar https://github.com/jtojnar/cmake-snips Modelled after Python’s os.path.join https://docs.python.org/3.7/library/os.path.htmlos.path.join Windows not supported function(join_p
+	Copyright (C) 2020 Jan van Dijk <j.v.dijk@tue.nl>
+	Copyright (C) 2020 Jens Wehner <j.wehner@esciencecenter.nl>
+	Copyright (C) 2020 Sebastien Boisvert <seb@boisvert.info>
+	Copyright (C) 2020 The Eigen Authors.
+	Copyright (C) 2020 Vladimir Solontsov
+	Copyright (C) 2020 Wenzel Jakob <wenzel@inf.ethz.ch> and Henry Schreiner
+	Copyright (C) 2020-2021 C. Antonio Sanchez <cantonios@google.com>
+	Copyright (C) 2020-2022 NVIDIA CORPORATION.
+	Copyright (C) 2020-2024 Arm Limited and affiliates.
+	Copyright (C) 2020-2025 Arm Ltd. and affiliates
+	Copyright (C) 2020present Daniel Trugman
+	Copyright (C) 2020present Roman Karlstetter
+	Copyright (C) 2021 - present, Daniela Engert All Rights Reserved
+	Copyright (C) 2021 Alanna Tempest
+	Copyright (C) 2021 Chip Kerchner (chip.kerchner@ibm.com)
+	Copyright (C) 2021 Laramie Leavitt (Google LLC) <lar@google.com>
+	Copyright (C) 2021 libuv project
+	Copyright (C) 2021 Pelican Mapping.",
+	Copyright (C) 2021 Steve R. Sun
+	Copyright (C) 2021, 2023-2024 Arm Limited and/or its affiliates All contributions from Caffe:
+	Copyright (C) 2021, 2023-2025 Arm Limited and/or its affiliates
+	Copyright (C) 2021-2022 Advanced Micro Devices, Inc. (Jianfeng Yan)
+	Copyright (C) 2021-2022 Farook Al-Sammarraie (The-EDev), All rights reserved
+	Copyright (C) 2021-2022 jothepro
+	Copyright (C) 2022 , Advanced Micro Devices, Inc. (Anthony Chang, Chunyu Lai, Illia Silin, Adam Osewski, Poyen Chen, Jehandad Khan)
+	Copyright (C) 2022 Apple Inc. define AT_DISPATCH_MPS_TYPES(TYPE, NAME, ...) AT_DISPATCH_SWITCH( TYPE, NAME, AT_DISPATCH_CASE(at::ScalarType::Float, __VA_ARGS__) AT_DISPATCH_CASE( at::ScalarType::Half, _
+	Copyright (C) 2022 Apple Inc. define TORCH_ASSERT_ONLY_METHOD_OPERATORS include <ATen/MemoryOverlap.h> include <ATen/WrapDimUtils.h> include <ATen/native/TensorShape.h> include <ATen/native/TypeProperti
+	Copyright (C) 2022 Apple Inc. define TORCH_ASSERT_ONLY_METHOD_OPERATORS include <ATen/mps/MPSProfiler.h> include <ATen/native/mps/Copy.h> include <ATen/native/mps/MPSGraphSonomaOps.h> include <ATen/nati
+	Copyright (C) 2022 Apple Inc. define TORCH_ASSERT_ONLY_METHOD_OPERATORS include <ATen/native/LinearAlgebraUtils.h> include <ATen/native/mps/OperationUtils.h> ifdef __OBJC__ include <MetalPerformanceShad
+	Copyright (C) 2022 Apple Inc. define TORCH_ASSERT_ONLY_METHOD_OPERATORS include <ATen/native/LinearAlgebraUtils.h> include <ATen/native/mps/OperationUtils.h> ifndef AT_PER_OPERATOR_HEADERS include <ATen
+	Copyright (C) 2022 Apple Inc. define TORCH_ASSERT_ONLY_METHOD_OPERATORS include <ATen/native/Pool.h> include <ATen/native/mps/OperationUtils.h> ifndef AT_PER_OPERATOR_HEADERS include <ATen/Functions.h> 
+	Copyright (C) 2022 Apple Inc. define TORCH_ASSERT_ONLY_METHOD_OPERATORS include <ATen/native/Resize.h> include <ATen/native/mps/MPSGraphVenturaOps.h> include <ATen/native/mps/OperationUtils.h> ifndef AT
+	Copyright (C) 2022 Apple Inc. define TORCH_ASSERT_ONLY_METHOD_OPERATORS include <ATen/TensorIterator.h> include <ATen/mps/MPSProfiler.h> include <ATen/native/Cross.h> include <ATen/native/mps/OperationU
+	Copyright (C) 2022 Apple Inc. define TORCH_ASSERT_ONLY_METHOD_OPERATORS include <ATen/TensorOperators.h> include <ATen/mps/MPSGeneratorImpl.h> include <ATen/native/DistributionTemplates.h> include <ATen
+	Copyright (C) 2022 Apple Inc. include <ATen/ATen.h> include <ATen/Tensor.h> include <ATen/Utils.h> include <torch/library.h> include <ATen/mps/EmptyTensor.h> include <ATen/mps/MPSDevice.h> include <ATen
+	Copyright (C) 2022 Apple Inc. include <ATen/detail/MPSHooksInterface.h>
+	Copyright (C) 2022 Apple Inc. include <ATen/mps/MPSDevice.h> include <ATen/mps/MPSGuardImpl.h>
+	Copyright (C) 2022 Apple Inc. include <ATen/Utils.h> include <ATen/mps/MPSGeneratorImpl.h> include <algorithm>
+	Copyright (C) 2022 Apple Inc. include <c10/util/CallOnce.h>
+	Copyright (C) 2022 Apple Inc. include <optional> define TORCH_ASSERT_ONLY_METHOD_OPERATORS include <ATen/mps/EmptyTensor.h> include <ATen/native/LinearAlgebraUtils.h> include <ATen/native/TensorFactorie
+	Copyright (C) 2022 Apple Inc. pragma once include <ATen/core/Tensor.h>
+	Copyright (C) 2022 Apple Inc. pragma once include <ATen/core/TensorBase.h>
+	Copyright (C) 2022 Cruise LLC
+	Copyright (C) 2022 Cruise LLC import logging import warnings from collections import OrderedDict from collections.abc import Iterable from typing import Union import torch import torch.distributed as dist
+	Copyright (C) 2022 Cruise LLC.
+	Copyright (C) 2022 Cruise LLC. All rights reserved
+	Copyright (C) 2022 libcpr and many other contributors
+	Copyright (C) 2022 the respective contributors, as shown by the AUTHORS file. All rights reserved
+	Copyright (C) 2022 Tri Dao. Inspired by / adapted from https://github.com/rwightman/pytorch-image-models/blob/master/timm/models/vision_transformer.py import math import re from collections import Or
+	Copyright (C) 2022 Tri Dao. This BERT implementation is based on our MLPerf 2.0 and MLPerf 2.1 BERT implementation. https://github.com/mlcommons/training_results_v2.0/blob/main/HazyResearch/benchmark
+	Copyright (C) 2022 V
+	Copyright (C) 2022-2023 Apple Inc.
+	Copyright (C) 2022-2023 Apple Inc. pragma once
+	Copyright (C) 2022-2023 IBM Corporation
+	Copyright (C) 2022-2024 Tri Dao.
+	Copyright (C) 2022-2025 EleutherAI and the HuggingFace Inc. team. All rights reserved
+	Copyright (C) 2022-2025 The pybind Community.
+	Copyright (C) 2023 Apple Inc. include <ATen/mps/MPSEvent.h>
+	Copyright (C) 2023 Dimitri van Heesch
+	Copyright (C) 2023 Dustin Spicuzza <dustin@virtualroadside.com>
+	Copyright (C) 2023 GGGGGGXY, Tri Dao. import math import json import re from pathlib import Path
+	Copyright (C) 2023 KNS Group LLC (YADRO)
+	Copyright (C) 2023 Meta Platforms, Inc. and affiliates.
+	Copyright (C) 2023 NVIDIA </div> Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s <a href="https://github.com/pradyunsg/
+	Copyright (C) 2023 Siping Wang
+	Copyright (C) 2023 Tri Dao. import json import math import os import re from collections import OrderedDict from pathlib import Path from typing import Dict, List, Union
+	Copyright (C) 2023 Tri Dao. import math
+	Copyright (C) 2023 Tri Dao. import math from typing import Optional, Tuple, Union
+	Copyright (C) 2023 Tri Dao. import math import re from collections import OrderedDict
+	Copyright (C) 2023 Tri Dao. import os import time from pathlib import Path
+	Copyright (C) 2023 Tri Dao. import time
+	Copyright (C) 2023-2024 SiFive, Inc.
+	Copyright (C) 2023-2024 The ggml authors
+	Copyright (C) 2023-2024 The pybind Community. pragma once
+	Copyright (C) 2023-2025 SGLang Team
+	Copyright (C) 2023-2025 The vLLM team.
+	Copyright (C) 2024 Cris Luengo
+	Copyright (C) 2024 Fonticons, Inc.
+	Copyright (C) 2024 Fonticons, Inc. :host,:root{--fa-font-solid:normal 900 1em/1 "Font Awesome 6 Free"}@font-face{font-display:block;font-family:Font Awesome 6 Free;font-style:normal;font-weight:900;src:ur
+	Copyright (C) 2024 Fonticons, Inc. :host,:root{--fa-style-family-brands:"Font Awesome 6 Brands";--fa-font-brands:normal 400 1em/1 "Font Awesome 6 Brands"}@font-face{font-display:block;font-family:Font Awe
+	Copyright (C) 2024 Fonticons, Inc. :host,:root{--fa-style-family-classic:"Font Awesome 6 Free";--fa-font-regular:normal 400 1em/1 "Font Awesome 6 Free"}@font-face{font-display:block;font-family:Font Aweso
+	Copyright (C) 2024 Google LLC set -e
+	Copyright (C) 2024 Imagination Technologies inc.
+	Copyright (C) 2024 Imagination Technologies, Inc.
+	Copyright (C) 2024 Jan Iwaszkiewicz <jiwaszkiewicz6@gmail.com>
+	Copyright (C) 2024 Jay Shah, Ganesh Bikshandi, Ying Zhang, Vijay Thakkar,
+	Copyright (C) 2024 Jay Shah, Ganesh Bikshandi, Ying Zhang, Vijay Thakkar, Pradeep Ramani, Tri Dao.
+	Copyright (C) 2024 Jay Shah, Ganesh Bikshandi, Ying Zhang, Vijay Thakkar, Pradeep Ramani, Tri Dao. Splitting the different template instantiations to different files to speed up compilation. This fil
+	Copyright (C) 2024 NVIDIA Corporation import logging import math import os import unittest from typing import Optional, Tuple
+	Copyright (C) 2024 Sanghun Cho, Tri Dao.
+	Copyright (C) 2024 Tan Ping Liang, Peter Bell For the safeguards against integer overflow in good_size search:
+	Copyright (C) 2024 The pybind Community. from __future__ import annotations
+	Copyright (C) 2024 The pybind Community. if defined(PYBIND11_INTERNALS_VERSION) undef PYBIND11_INTERNALS_VERSION endif define PYBIND11_INTERNALS_VERSION 900000001
+	Copyright (C) 2024 The pybind Community. include "pybind11_tests.h" include "test_cpp_conduit_traveler_bindings.h"
+	Copyright (C) 2024 The pybind Community. include "test_cpp_conduit_traveler_bindings.h"
+	Copyright (C) 2024 The pybind Community. STRONG REQUIREMENT:
+	Copyright (C) 2024 The pybind Community. THIS MUST STAY AT THE TOP! include <pybind11/pybind11.h> EXCLUSIVELY for PYBIND11_PLATFORM_ABI_ID Potential future direction to maximize reusability:
+	Copyright (C) 2024 The pybind Community. To maximize reusability:
+	Copyright (C) 2024 Tri Dao. All rights reserved
+	Copyright (C) 2024 Tri Dao. from functools import partial from typing import Optional
+	Copyright (C) 2024 Tri Dao. Splitting the different head dimensions to different files to speed up compilation. This file is auto-generated. See "generate_kernels.py" include "namespace_config.h" inc
+	Copyright (C) 2024-2025 Arm Limited and/or its affiliate
+	Copyright (C) 2024-2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+	Copyright (C) 2025 Yuji Hirose
+	Copyright (C) : EDF 2001 $Header$=============================================================================
+	Copyright (C) <2024> NVIDIA CORPORATION
+	Copyright (C) = '2016-2024 Intel Corporation author = '' -- General configuration ---------------------------------------------------
+	Copyright (C) = '2017 Wenzel Jakob author = 'Wenzel Jakob' The version info for the project you're documenting, acts as replacement for |version| and |release|, also used in various other places througho
+	Copyright (C) = '2021 OpenTelemetry authors author = 'OpenTelemetry authors' The full version, including alpha/beta/rc tags release = "1.14.2"
+	Copyright (C) = '2023 NVIDIA author = 'NVIDIA' release = '3.1.0' -- General configuration --------------------------------------------------- https://www.sphinx-doc.org/en/master/usage/configuration.html
+	Copyright (C) = ( '''// Copyright 2016 The Gemmlowp Authors. All Rights Reserved
+	Copyright (C) = u"2008 Google LLC" author = u"Google LLC" The short X.Y version version = u"" The full version, including alpha/beta/rc tags release = google.protobuf.__version__
+	Copyright (C) All source code and accompanying documentation is copyright (c) 2015-2020 NVIDIA CORPORATION. All rights reserved
+	Copyright (C) ARM Ltd. 2010-2024.
+	Copyright (C) bel2125, 2010 -- MIT public licence
+	Copyright (C) check in CI [1965](https://github.com/open-telemetry/opentelemetry-cpp/pull/1965) [BUILD] Fix typo GENENV -> GETENV [1972](https://github.com/open-telemetry/opentelemetry-cpp/pull/1972) [SEM
+	Copyright (C) Copyright(c) 2013-2016 the respective contributors
+	Copyright (C) Copyright(c) 2013-2016 the respective contributors All rights reserved
+	Copyright (C) Copyright(c) 2015present, Gabi Melman
+	Copyright (C) Copyright(c) 2016-2018 Gabi Melman.
+	Copyright (C) Copyright(c) 2022 NVIDIA CORPORATION. All rights reserved
+	Copyright (C) copyright(FILE_LIST " file( INSTALL "${SOURCE_PATH}/changes.txt" "${SOURCE_PATH}/Steinberg ASIO Logo Artwork.zip" "${SOURCE_PATH}/Steinberg ASIO 2.3.3 Licensing Agreement V2.0.3 - 2023.pdf" "${SOURCE_
+	Copyright (C) Copyright: 2017-2021 Huu Nguyen
+	Copyright (C) copyright: 2019 The TensorFlow Authors.
+	Copyright (C) Copyright: 2022 libcpr and many other contributors
+	Copyright (C) copyright: Copyright (c) 2015 Melissa E. O
+	Copyright (C) copyright: Copyright 2005 Robert Kern (robert.kern@gmail.com)
+	Copyright (C) copyright: Copyright 2007-2023 by the Sphinx team, see AUTHORS.
+	Copyright (C) Copyright>Copyright 2015 Google Inc.</Copyright>
+	Copyright (C) Copyright>Copyright 2022 Google LLC</Copyright> <IncludeSymbols>true</IncludeSymbols> <SymbolPackageFormat>snupkg</SymbolPackageFormat> <SignAssembly>true</SignAssembly> <AssemblyOriginatorKeyFile>fla
+	Copyright (C) Fabian Giesen, 2016 All rights reserved
+	Copyright (C) Fabian Giesen, 2016.
+	Copyright (C) John Maddock 2006.
+	Copyright (C) Kepler Project 2003-2020 (http://keplerproject.github.io/luafilesystem)
+	Copyright (C) Kepler Project 2003-2020 (http://keplerproject.github.io/luafilesystem) File system manipulation library. This library offers these functions:
+	Copyright (C) LUA_RELEASE " Copyright (C) 1994-2021 Lua.org, PUC-Rio" define LUA_AUTHORS "R. Ierusalimschy, L. H. de Figueiredo, W. Celes"
+	Copyright (C) Malte Skarupke 2017
+	Copyright (C) Malte Skarupke 2017.
+	Copyright (C) Naoki Shibata and contributors 2010-2024.
+	Copyright (C) Paul Dreik 2019
+	Copyright (C) Paul Dreik 2019 namespace safe_duration_cast { template <typename To, typename From, FMT_ENABLE_IF(!std::is_same<From, To>::value && std::numeric_limits<From>::is_signed == std::numeric_limi
+RonnyPfannschmidt/iniconfig 2.3.0 pypi:iniconfig/2.3.0: https://github.com/RonnyPfannschmidt/iniconfig
+	Copyright (C) 2010-2023 Holger Krekel and others
+tomli 2.4.1 pypi:tomli/2.4.1: https://github.com/hukkin/tomli
+	Copyright (C) 2021 Taneli Hukkinen
+typing-inspection 0.4.4 pypi:typing-inspection/0.4.4
+	No Copyrights found
+vllm 0.8.5 pypi:vllm/0.8.5: https://docs.vllm.ai
+	Copyright (C) 1993-2024 NVIDIA CORPORATION
+	Copyright (C) 2011-2025 NVIDIA CORPORATION. All rights reserved
+	Copyright (C) 2018 The Chromium Authors. All rights reserved
+	Copyright (C) 2018, 2023 The OpenAI Team Authors and HuggingFace Inc. team.
+	Copyright (C) 2021 The EleutherAI and HuggingFace Teams. All rights reserved
+	Copyright (C) 2021 The Fairseq Authors and The HuggingFace Inc. team.
+	Copyright (C) 2021 The LG AI Research EXAONE Lab
+	Copyright (C) 2021 The LG AI Research EXAONE Lab. All rights reserved
+	Copyright (C) 2022 EleutherAI The HuggingFace Inc. team. All rights reserved
+	Copyright (C) 2022 HuggingFace Inc. team and BigScience workshop.
+	Copyright (C) 2022 the Big Science Workshop and HuggingFace Inc. team.
+	Copyright (C) 2022 The Fairseq Authors and The HuggingFace Inc. team. All rights
+	Copyright (C) 2022 Tri Dao, trid@cs.stanford.edu. All rights reserved
+	Copyright (C) 2022-2024 EleutherAI and the HuggingFace Inc. team. All rights reserved
+	Copyright (C) 2023 Cerebras Systems.
+	Copyright (C) 2023 CTranslate2, and Michael Feil
+	Copyright (C) 2023 DeepSeek-AI and the HuggingFace Inc. team. All rights reserved
+	Copyright (C) 2023 Stability AI, EleutherAI, and The HuggingFace Inc. team.
+	Copyright (C) 2023 the Falcon authors and HuggingFace Inc. team. All rights
+	Copyright (C) 2023 the Jais authors and HuggingFace Inc. team. All rights reserved
+	Copyright (C) 2023 The vLLM team. """Inference-only Qwen2-RM model compatible with HuggingFace weights.""" from typing import Iterable, Optional, Set, Tuple, Union import torch from torch import nn
+	Copyright (C) 2023 The vLLM team. Adapted from https://github.com/NVIDIA/Megatron-LM/blob/main/megatron/core/parallel_state.py
+	Copyright (C) 2023 The vLLM team. Adapted from https://github.com/NVIDIA/Megatron-LM/blob/main/megatron/core/tensor_parallel/utils.py
+	Copyright (C) 2023 Tri Dao. clang-format off adapted from https://github.com/state-spaces/mamba/blob/main/csrc/selective_scan/selective_scan.h
+	Copyright (C) 2023 Tri Dao. from typing import Optional, Union
+	Copyright (C) 2023 Tri Dao. from typing import Optional, Union, Tuple, List
+	Copyright (C) 2023 Tri Dao. import math from typing import Optional, Tuple, Union
+	Copyright (C) 2023-2024 DeepSeek.
+	Copyright (C) 2023-2024 HuggingFace Inc. team. All rights reserved
+	Copyright (C) 2023-2024 OpenGVLab
+	Copyright (C) 2023-2024 SGLang Team
+	Copyright (C) 2023-2025 The Qwen Team.
+	Copyright (C) 2023-2025 The vLLM team.
+	Copyright (C) 2024 BigCode and the HuggingFace Inc. team. All rights reserved
+	Copyright (C) 2024 Cohere and the HuggingFace Inc. team. All rights reserved
+	Copyright (C) 2024 H2O.AI
+	Copyright (C) 2024 HandH1998
+	Copyright (C) 2024 Meta Platforms, Inc. and affiliates. All rights reserved
+	Copyright (C) 2024 Microsoft and the HuggingFace Inc. team. All rights reserved
+	Copyright (C) 2024 NVIDIA
+	Copyright (C) 2024 Roberto Lopez Castro (roberto.lopez.castro@udc.es). All
+	Copyright (C) 2024 The LG U
+	Copyright (C) 2024 The ModelBest team.
+	Copyright (C) 2024 the Outlines developers
+	Copyright (C) 2024 Tri Dao, Albert Gu. Adapted from https://github.com/state-spaces/mamba/blob/v2.2.4/mamba_ssm/ops/triton/selective_state_update.py import torch import triton import triton.language 
+	Copyright (C) 2024 Tri Dao, Albert Gu. Adapted from https://github.com/state-spaces/mamba/blob/v2.2.4/mamba_ssm/ops/triton/ssd_bmm.py ruff: noqa: E501,SIM102
+	Copyright (C) 2024 Tri Dao, Albert Gu. Adapted from https://github.com/state-spaces/mamba/blob/v2.2.4/mamba_ssm/ops/triton/ssd_chunk_scan.py ruff: noqa: E501,SIM102
+	Copyright (C) 2024 Tri Dao, Albert Gu. Adapted from https://github.com/state-spaces/mamba/blob/v2.2.4/mamba_ssm/ops/triton/ssd_chunk_state.py ruff: noqa: E501
+	Copyright (C) 2024 Tri Dao, Albert Gu. Adapted from https://github.com/state-spaces/mamba/blob/v2.2.4/mamba_ssm/ops/triton/ssd_combined.py ruff: noqa: E501
+	Copyright (C) 2024 Tri Dao, Albert Gu. Adapted from https://github.com/state-spaces/mamba/blob/v2.2.4/mamba_ssm/ops/triton/ssd_state_passing.py ruff: noqa: E501
+	Copyright (C) 2024 Tri Dao. Adapted from https://github.com/Dao-AILab/causal-conv1d/blob/main/causal_conv1d/causal_conv1d_interface.py from typing import Optional
+	Copyright (C) 2024 Tri Dao. clang-format off adapted from https://github.com/Dao-AILab/causal-conv1d/blob/main/csrc/causal_conv1d.h pragma once
+	Copyright (C) 2024-2025 Google Inc. HuggingFace Inc. team. All rights reserved
+	Copyright (C) 2024-2025 Habana Labs, Ltd. an Intel Company
+	Copyright (C) 2024-2025 the HuggingFace Inc. team. All rights reserved
+	Copyright (C) 2025 IBM.
+	Copyright (C) 2025 Skywork
+	Copyright (C) 2025 the LLAMA4, Meta Inc., vLLM, and HuggingFace Inc. team. All rights reserved
+	Copyright (C) 2025 The Moonshot AI Team, DeepSeek-AI, and HuggingFace Inc. team. All rights reserved
+	Copyright (C) 2025 The Zhipu AI team.
+	Copyright (C) 2025 vLLM Team
+	Copyright (C) Marlin.2024 Elias Frantar
+vllm v0.11.1rc1 github:vllm-project/vllm:v0.11.1rc1: https://docs.vllm.ai
+	Copyright (C) 1993-2025 NVIDIA CORPORATION
+	Copyright (C) 2011-2025 NVIDIA CORPORATION. All rights reserved
+	Copyright (C) 2015 Princeton Vision Group
+	Copyright (C) 2018 The Chromium Authors. All rights reserved
+	Copyright (C) 2018, 2023 The OpenAI Team Authors and HuggingFace Inc. team.
+	Copyright (C) 2021 The EleutherAI and HuggingFace Teams. All rights reserved
+	Copyright (C) 2021 The LG AI Research EXAONE Lab
+	Copyright (C) 2022 EleutherAI The HuggingFace Inc. team. All rights reserved
+	Copyright (C) 2022 HuggingFace Inc. team and BigScience workshop.
+	Copyright (C) 2022 the Big Science Workshop and HuggingFace Inc. team.
+	Copyright (C) 2022 The Fairseq Authors and The HuggingFace Inc. team. All rights
+	Copyright (C) 2022 Tri Dao, trid@cs.stanford.edu.
+	Copyright (C) 2022-2024 EleutherAI and the HuggingFace Inc. team. All rights reserved
+	Copyright (C) 2023 Antgroup and The HuggingFace Inc. team. All rights reserved
+	Copyright (C) 2023 Cerebras Systems.
+	Copyright (C) 2023 CTranslate2, and Michael Feil
+	Copyright (C) 2023 DeepSeek-AI and the HuggingFace Inc. team. All rights reserved
+	Copyright (C) 2023 OpenGVLab
+	Copyright (C) 2023 Stability AI, EleutherAI, and The HuggingFace Inc. team.
+	Copyright (C) 2023 the Falcon authors and HuggingFace Inc. team.
+	Copyright (C) 2023 the Jais authors and HuggingFace Inc. team. All rights reserved
+	Copyright (C) 2023-2024 DeepSeek.
+	Copyright (C) 2023-2024 HuggingFace Inc. team. All rights reserved
+	Copyright (C) 2023-2024 SGLang Team
+	Copyright (C) 2023-2024 Tri Dao.
+	Copyright (C) 2023-2025 Songlin Yang, Yu Zhang
+	Copyright (C) 2023-2025 The Qwen team.
+	Copyright (C) 2023-2025 The vLLM team.
+	Copyright (C) 2023-2025 vLLM Team
+	Copyright (C) 2024 BigCode and the HuggingFace Inc. team. All rights reserved
+	Copyright (C) 2024 Cohere and the HuggingFace Inc. team. All rights reserved
+	Copyright (C) 2024 DeepSeek-AI team.
+	Copyright (C) 2024 H2O.AI
+	Copyright (C) 2024 Meta
+	Copyright (C) 2024 Meta Platforms, Inc. and affiliates. All rights reserved
+	Copyright (C) 2024 Microsoft and the HuggingFace Inc. team. All rights reserved
+	Copyright (C) 2024 NVIDIA
+	Copyright (C) 2024 Roberto Lopez Castro (roberto.lopez.castro@udc.es). All
+	Copyright (C) 2024 the HuggingFace Inc. team. All rights reserved
+	Copyright (C) 2024 The HunYuan team.
+	Copyright (C) 2024 The LG U
+	Copyright (C) 2024 The ModelBest team.
+	Copyright (C) 2024 Tri Dao, Albert Gu.
+	Copyright (C) 2024-2025 Google Inc. HuggingFace Inc. team. All rights reserved
+	Copyright (C) 2025 Horizon team, Xiaomi MiLM Plus.
+	Copyright (C) 2025 IBM.
+	Copyright (C) 2025 Oracle and/or its affiliates.
+	Copyright (C) 2025 Roberto L. Castro (Roberto.LopezCastro@ist.ac.at).
+	Copyright (C) 2025 SGLang Team. All Rights Reserved
+	Copyright (C) 2025 Shanghai AI Lab
+	Copyright (C) 2025 Skywork
+	Copyright (C) 2025 The Baidu team.
+	Copyright (C) 2025 The HuggingFace Inc. team.
+	Copyright (C) 2025 The LG AI Research and HuggingFace Inc. team. All rights reserved
+	Copyright (C) 2025 The LG CNS Gen AI Solution Delivery Team.
+	Copyright (C) 2025 the LLAMA4, Meta Inc., vLLM, and HuggingFace Inc. team.
+	Copyright (C) 2025 The Moonshot AI Team, DeepSeek-AI, and HuggingFace Inc. team. All rights reserved
+	Copyright (C) 2025 The Qwen Team and The HuggingFace Inc. team. All rights reserved
+	Copyright (C) 2025 The Qwen team, Alibaba Group and the HuggingFace Inc. team.
+	Copyright (C) 2025 The rednote-hilab team.
+	Copyright (C) 2025 The Seed team.
+	Copyright (C) 2025 The Swiss AI Initiative.
+	Copyright (C) 2025 The Zhipu AI team.
+	Copyright (C) 2025 The ZhipuAI Team.
+	Copyright (C) 2025 Xiaomi Corporation.
+	Copyright (C) 2025present the Outlines developers
+	Copyright (C) Marlin.2024 Elias Frantar
+xformers 0.0.20.dev537 pypi:xformers/0.0.20.dev537: https://facebookresearch.github.io/xformers/
+	Copyright (C) 2021 NVIDIA CORPORATION. All rights reserved
+	Copyright (C) 2022 Tri Dao. """ Useful functions for writing test code. """ import torch import torch.utils.benchmark as benchmark
+	Copyright (C) 2022 Tri Dao. Adapted from https://github.com/NVIDIA/apex/blob/master/apex/contrib/layer_norm/layer_norm.py import torch from torch.nn import init
+	Copyright (C) 2022 Tri Dao. from typing import Optional from functools import partial
+	Copyright (C) 2022 Tri Dao. import math from functools import partial
+	Copyright (C) 2022 Tri Dao. import torch import torch.nn as nn from torch import Tensor
+	Copyright (C) 2022 Tri Dao. import torch import torch.nn as nn import torch.nn.functional as F
+	Copyright (C) 2022 Tri Dao. Inspired by / adapted from https://github.com/rwightman/pytorch-image-models/blob/master/timm/models/vision_transformer.py import math import re from functools import part
+	Copyright (C) 2022 Tri Dao. This BERT implementation is based on our MLPerf 2.0 and MLPerf 2.1 BERT implementation. https://github.com/mlcommons/training_results_v2.0/blob/main/HazyResearch/benchmark
+	Copyright (C) 2023 Tri Dao. Adapted from https://github.com/NVIDIA/Megatron-LM/blob/0bb597b42c53355a567aba2a1357cc34b9d99ddd/megatron/text_generation/forward_step.pyL31 from typing import Optional, U
+	Copyright (C) 2023 Tri Dao. from typing import Tuple import math
+	Copyright (C) 2023 Tri Dao. import logging import math import re from functools import partial
+	Copyright (C) 2023 Tri Dao. import math import json import re from pathlib import Path
+	Copyright (C) 2023 Tri Dao. import math import re
+	Copyright (C) 2023 Tri Dao. Inspired by https://github.com/NVIDIA/apex/blob/master/apex/fused_dense/fused_dense.py We make it work with pytorch amp and with bfloat16. The TensorParallel linear module
+
+Licenses: 
+
+Apache License 2.0
+(Packaging 26.2, vllm 0.8.5, vllm v0.11.1rc1)
+
+Apache License
+Version 2.0, January 2004
+=========================
+
+
+http://www.apache.org/licenses/
+
+TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+1. Definitions.
+
+"License" shall mean the terms and conditions for use, reproduction, and
+distribution as defined by Sections 1 through 9 of this document.
+
+"Licensor" shall mean the copyright owner or entity authorized by the copyright
+owner that is granting the License.
+
+"Legal Entity" shall mean the union of the acting entity and all other entities
+that control, are controlled by, or are under common control with that entity.
+For the purposes of this definition, "control" means (i) the power, direct or
+indirect, to cause the direction or management of such entity, whether by
+contract or otherwise, or (ii) ownership of fifty percent (50%) or more of the
+outstanding shares, or (iii) beneficial ownership of such entity.
+
+"You" (or "Your") shall mean an individual or Legal Entity exercising permissions
+granted by this License.
+
+"Source" form shall mean the preferred form for making modifications, including
+but not limited to software source code, documentation source, and configuration
+files.
+
+"Object" form shall mean any form resulting from mechanical transformation or
+translation of a Source form, including but not limited to compiled object code,
+generated documentation, and conversions to other media types.
+
+"Work" shall mean the work of authorship, whether in Source or Object form, made
+available under the License, as indicated by a copyright notice that is included
+in or attached to the work (an example is provided in the Appendix below).
+
+"Derivative Works" shall mean any work, whether in Source or Object form, that is
+based on (or derived from) the Work and for which the editorial revisions,
+annotations, elaborations, or other modifications represent, as a whole, an
+original work of authorship. For the purposes of this License, Derivative Works
+shall not include works that remain separable from, or merely link (or bind by
+name) to the interfaces of, the Work and Derivative Works thereof.
+
+"Contribution" shall mean any work of authorship, including the original version
+of the Work and any modifications or additions to that Work or Derivative Works
+thereof, that is intentionally submitted to Licensor for inclusion in the Work by
+the copyright owner or by an individual or Legal Entity authorized to submit on
+behalf of the copyright owner. For the purposes of this definition, "submitted"
+means any form of electronic, verbal, or written communication sent to the
+Licensor or its representatives, including but not limited to communication on
+electronic mailing lists, source code control systems, and issue tracking systems
+that are managed by, or on behalf of, the Licensor for the purpose of discussing
+and improving the Work, but excluding communication that is conspicuously marked
+or otherwise designated in writing by the copyright owner as "Not a
+Contribution."
+
+"Contributor" shall mean Licensor and any individual or Legal Entity on behalf of
+whom a Contribution has been received by Licensor and subsequently incorporated
+within the Work.
+
+2. Grant of Copyright License. Subject to the terms and conditions of this
+License, each Contributor hereby grants to You a perpetual, worldwide,
+non-exclusive, no-charge, royalty-free, irrevocable copyright license to
+reproduce, prepare Derivative Works of, publicly display, publicly perform,
+sublicense, and distribute the Work and such Derivative Works in Source or Object
+form.
+
+3. Grant of Patent License. Subject to the terms and conditions of this License,
+each Contributor hereby grants to You a perpetual, worldwide, non-exclusive,
+no-charge, royalty-free, irrevocable (except as stated in this section) patent
+license to make, have made, use, offer to sell, sell, import, and otherwise
+transfer the Work, where such license applies only to those patent claims
+licensable by such Contributor that are necessarily infringed by their
+Contribution(s) alone or by combination of their Contribution(s) with the Work to
+which such Contribution(s) was submitted. If You institute patent litigation
+against any entity (including a cross-claim or counterclaim in a lawsuit)
+alleging that the Work or a Contribution incorporated within the Work constitutes
+direct or contributory patent infringement, then any patent licenses granted to
+You under this License for that Work shall terminate as of the date such
+litigation is filed.
+
+4. Redistribution. You may reproduce and distribute copies of the Work or
+Derivative Works thereof in any medium, with or without modifications, and in
+Source or Object form, provided that You meet the following conditions:
+
+  a. You must give any other recipients of the Work or Derivative Works a copy of
+    this License; and
+
+  b. You must cause any modified files to carry prominent notices stating that
+    You changed the files; and
+
+  c. You must retain, in the Source form of any Derivative Works that You
+    distribute, all copyright, patent, trademark, and attribution notices from
+    the Source form of the Work, excluding those notices that do not pertain to
+    any part of the Derivative Works; and
+
+  d. If the Work includes a "NOTICE" text file as part of its distribution, then
+    any Derivative Works that You distribute must include a readable copy of the
+    attribution notices contained within such NOTICE file, excluding those
+    notices that do not pertain to any part of the Derivative Works, in at least
+    one of the following places: within a NOTICE text file distributed as part of
+    the Derivative Works; within the Source form or documentation, if provided
+    along with the Derivative Works; or, within a display generated by the
+    Derivative Works, if and wherever such third-party notices normally appear.
+    The contents of the NOTICE file are for informational purposes only and do
+    not modify the License. You may add Your own attribution notices within
+    Derivative Works that You distribute, alongside or as an addendum to the
+    NOTICE text from the Work, provided that such additional attribution notices
+    cannot be construed as modifying the License.
+
+You may add Your own copyright statement to Your modifications and may provide
+additional or different license terms and conditions for use, reproduction, or
+distribution of Your modifications, or for any such Derivative Works as a whole,
+provided Your use, reproduction, and distribution of the Work otherwise complies
+with the conditions stated in this License.
+
+5. Submission of Contributions. Unless You explicitly state otherwise, any
+Contribution intentionally submitted for inclusion in the Work by You to the
+Licensor shall be under the terms and conditions of this License, without any
+additional terms or conditions. Notwithstanding the above, nothing herein shall
+supersede or modify the terms of any separate license agreement you may have
+executed with Licensor regarding such Contributions.
+
+6. Trademarks. This License does not grant permission to use the trade names,
+trademarks, service marks, or product names of the Licensor, except as required
+for reasonable and customary use in describing the origin of the Work and
+reproducing the content of the NOTICE file.
+
+7. Disclaimer of Warranty. Unless required by applicable law or agreed to in
+writing, Licensor provides the Work (and each Contributor provides its
+Contributions) on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+either express or implied, including, without limitation, any warranties or
+conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+PARTICULAR PURPOSE. You are solely responsible for determining the
+appropriateness of using or redistributing the Work and assume any risks
+associated with Your exercise of permissions under this License.
+
+8. Limitation of Liability. In no event and under no legal theory, whether in
+tort (including negligence), contract, or otherwise, unless required by
+applicable law (such as deliberate and grossly negligent acts) or agreed to in
+writing, shall any Contributor be liable to You for damages, including any
+direct, indirect, special, incidental, or consequential damages of any character
+arising as a result of this License or out of the use or inability to use the
+Work (including but not limited to damages for loss of goodwill, work stoppage,
+computer failure or malfunction, or any and all other commercial damages or
+losses), even if such Contributor has been advised of the possibility of such
+damages.
+
+9. Accepting Warranty or Additional Liability. While redistributing the Work or
+Derivative Works thereof, You may choose to offer, and charge a fee for,
+acceptance of support, warranty, indemnity, or other liability obligations and/or
+rights consistent with this License. However, in accepting such obligations, You
+may act only on Your own behalf and on Your sole responsibility, not on behalf of
+any other Contributor, and only if You agree to indemnify, defend, and hold each
+Contributor harmless for any liability incurred by, or claims asserted against,
+such Contributor by reason of your accepting any such warranty or additional
+liability.
+
+END OF TERMS AND CONDITIONS
+
+APPENDIX: How to apply the Apache License to your work
+
+To apply the Apache License to your work, attach the following boilerplate
+notice, with the fields enclosed by brackets "[]" replaced with your own
+identifying information. (Don't include the brackets!) The text should be
+enclosed in the appropriate comment syntax for the file format. We also recommend
+that a file or class name and description of purpose be included on the same
+"printed page" as the copyright notice for easier identification within
+third-party archives.
+
+  Copyright [yyyy] [name of copyright owner] Licensed under the Apache License,
+  Version 2.0 (the "License"); you may not use this file except in compliance
+  with the License. You may obtain a copy of the License at
+  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law
+  or agreed to in writing, software distributed under the License is
+  distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  KIND, either express or implied. See the License for the specific language
+  governing permissions and limitations under the License.
+
+---
+
+BSD 2-clause "Simplified" License
+(Packaging 26.2, Pygments - Python syntax highlighter 2.21.0)
+
+BSD Two Clause License
+======================
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+  1. Redistributions of source code must retain the above copyright notice, this
+    list of conditions and the following disclaimer.
+
+  2. Redistributions in binary form must reproduce the above copyright notice,
+    this list of conditions and the following disclaimer in the documentation
+    and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR "AS IS" AND ANY EXPRESS OR IMPLIED
+WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
+SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
+OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
+DAMAGE.
+
+---
+
+BSD 3-clause "New" or "Revised" License
+(Click - Python Command Line Utility 8.4.2, pytorch 2.9.0, xformers 0.0.20.dev537)
+
+Copyright (c) <YEAR>, <OWNER>
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+  * Redistributions of source code must retain the above copyright notice, this
+    list of conditions and the following disclaimer.
+
+  * Redistributions in binary form must reproduce the above copyright notice,
+    this list of conditions and the following disclaimer in the documentation
+    and/or other materials provided with the distribution.
+
+  * Neither the name of the <ORGANIZATION> nor the names of its contributors may
+    be used to endorse or promote products derived from this software without
+    specific prior written permission.
+
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS
+OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+---
+
+MIT License
+(annotated-types 0.8.0, black 26.3.1, ddt 1.7.2, einops 0.8.2, exceptiongroup 1.3.1, expecttest 0.1.3, mypy-extensions 1.1.0, platformdirs 4.11.3, pydantic 2.13.4, pydantic-core 2.46.4, pypi/setuptools 69.5.1, pytest 9.0.2, python-pluggy 1.6.0, pytokens 0.4.1, RonnyPfannschmidt/iniconfig 2.3.0, tomli 2.4.1, typing-inspection 0.4.4)
+
+The MIT License
+===============
+
+Copyright (c) <year> <copyright holders>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in the
+Software without restriction, including without limitation the rights to use,
+copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the
+Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN
+AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+---
+
+Mozilla Public License 2.0
+(pathspec 1.1.1)
+
+Mozilla Public License
+Version 2.0
+======================
+
+
+1. Definitions
+--------------
+
+  1.1. "Contributor"
+
+  means each individual or legal entity that creates, contributes to the creation
+  of, or owns Covered Software.
+
+  1.2. "Contributor Version"
+
+  means the combination of the Contributions of others (if any) used by a
+  Contributor and that particular Contributor's Contribution.
+
+  1.3. "Contribution"
+
+  means Covered Software of a particular Contributor.
+
+  1.4. "Covered Software"
+
+  means Source Code Form to which the initial Contributor has attached the notice
+  in Exhibit A, the Executable Form of such Source Code Form, and Modifications
+  of such Source Code Form, in each case including portions thereof.
+
+  1.5. "Incompatible With Secondary Licenses"
+
+  means
+
+    a. 
+
+      that the initial Contributor has attached the notice described in Exhibit B
+      to the Covered Software; or
+
+    b. 
+
+      that the Covered Software was made available under the terms of version 1.1
+      or earlier of the License, but not also under the terms of a Secondary
+      License.
+
+  1.6. "Executable Form"
+
+  means any form of the work other than Source Code Form.
+
+  1.7. "Larger Work"
+
+  means a work that combines Covered Software with other material, in a separate
+  file or files, that is not Covered Software.
+
+  1.8. "License"
+
+  means this document.
+
+  1.9. "Licensable"
+
+  means having the right to grant, to the maximum extent possible, whether at the
+  time of the initial grant or subsequently, any and all of the rights conveyed
+  by this License.
+
+  1.10. "Modifications"
+
+  means any of the following:
+
+    a. 
+
+      any file in Source Code Form that results from an addition to, deletion
+      from, or modification of the contents of Covered Software; or
+
+    b. 
+
+      any new file in Source Code Form that contains any Covered Software.
+
+  1.11. "Patent Claims" of a Contributor
+
+  means any patent claim(s), including without limitation, method, process, and
+  apparatus claims, in any patent Licensable by such Contributor that would be
+  infringed, but for the grant of the License, by the making, using, selling,
+  offering for sale, having made, import, or transfer of either its Contributions
+  or its Contributor Version.
+
+  1.12. "Secondary License"
+
+  means either the GNU General Public License, Version 2.0, the GNU Lesser
+  General Public License, Version 2.1, the GNU Affero General Public License,
+  Version 3.0, or any later versions of those licenses.
+
+  1.13. "Source Code Form"
+
+  means the form of the work preferred for making modifications.
+
+  1.14. "You" (or "Your")
+
+  means an individual or a legal entity exercising rights under this License. For
+  legal entities, "You" includes any entity that controls, is controlled by, or
+  is under common control with You. For purposes of this definition, "control"
+  means (a) the power, direct or indirect, to cause the direction or management
+  of such entity, whether by contract or otherwise, or (b) ownership of more than
+  fifty percent (50%) of the outstanding shares or beneficial ownership of such
+  entity.
+
+
+2. License Grants and Conditions
+--------------------------------
+
+
+  2.1. Grants
+
+  Each Contributor hereby grants You a world-wide, royalty-free, non-exclusive
+  license:
+
+    a. 
+
+      under intellectual property rights (other than patent or trademark)
+      Licensable by such Contributor to use, reproduce, make available, modify,
+      display, perform, distribute, and otherwise exploit its Contributions,
+      either on an unmodified basis, with Modifications, or as part of a Larger
+      Work; and
+
+    b. 
+
+      under Patent Claims of such Contributor to make, use, sell, offer for sale,
+      have made, import, and otherwise transfer either its Contributions or its
+      Contributor Version.
+
+
+  2.2. Effective Date
+
+  The licenses granted in Section 2.1 with respect to any Contribution become
+  effective for each Contribution on the date the Contributor first distributes
+  such Contribution.
+
+
+  2.3. Limitations on Grant Scope
+
+  The licenses granted in this Section 2 are the only rights granted under this
+  License. No additional rights or licenses will be implied from the distribution
+  or licensing of Covered Software under this License. Notwithstanding
+  Section 2.1(b) above, no patent license is granted by a Contributor:
+
+    a. 
+
+      for any code that a Contributor has removed from Covered Software; or
+
+    b. 
+
+      for infringements caused by: (i) Your and any other third party's
+      modifications of Covered Software, or (ii) the combination of its
+      Contributions with other software (except as part of its Contributor
+      Version); or
+
+    c. 
+
+      under Patent Claims infringed by Covered Software in the absence of its
+      Contributions.
+
+  This License does not grant any rights in the trademarks, service marks, or
+  logos of any Contributor (except as may be necessary to comply with the notice
+  requirements in Section 3.4).
+
+
+  2.4. Subsequent Licenses
+
+  No Contributor makes additional grants as a result of Your choice to distribute
+  the Covered Software under a subsequent version of this License (see
+  Section 10.2) or under the terms of a Secondary License (if permitted under the
+  terms of Section 3.3).
+
+
+  2.5. Representation
+
+  Each Contributor represents that the Contributor believes its Contributions are
+  its original creation(s) or it has sufficient rights to grant the rights to its
+  Contributions conveyed by this License.
+
+
+  2.6. Fair Use
+
+  This License is not intended to limit any rights You have under applicable
+  copyright doctrines of fair use, fair dealing, or other equivalents.
+
+
+  2.7. Conditions
+
+  Sections 3.1, 3.2, 3.3, and 3.4 are conditions of the licenses granted in
+  Section 2.1.
+
+
+3. Responsibilities
+-------------------
+
+
+  3.1. Distribution of Source Form
+
+  All distribution of Covered Software in Source Code Form, including any
+  Modifications that You create or to which You contribute, must be under the
+  terms of this License. You must inform recipients that the Source Code Form of
+  the Covered Software is governed by the terms of this License, and how they can
+  obtain a copy of this License. You may not attempt to alter or restrict the
+  recipients' rights in the Source Code Form.
+
+
+  3.2. Distribution of Executable Form
+
+  If You distribute Covered Software in Executable Form then:
+
+    a. 
+
+      such Covered Software must also be made available in Source Code Form, as
+      described in Section 3.1, and You must inform recipients of the Executable
+      Form how they can obtain a copy of such Source Code Form by reasonable
+      means in a timely manner, at a charge no more than the cost of distribution
+      to the recipient; and
+
+    b. 
+
+      You may distribute such Executable Form under the terms of this License, or
+      sublicense it under different terms, provided that the license for the
+      Executable Form does not attempt to limit or alter the recipients' rights
+      in the Source Code Form under this License.
+
+
+  3.3. Distribution of a Larger Work
+
+  You may create and distribute a Larger Work under terms of Your choice,
+  provided that You also comply with the requirements of this License for the
+  Covered Software. If the Larger Work is a combination of Covered Software with
+  a work governed by one or more Secondary Licenses, and the Covered Software is
+  not Incompatible With Secondary Licenses, this License permits You to
+  additionally distribute such Covered Software under the terms of such Secondary
+  License(s), so that the recipient of the Larger Work may, at their option,
+  further distribute the Covered Software under the terms of either this License
+  or such Secondary License(s).
+
+
+  3.4. Notices
+
+  You may not remove or alter the substance of any license notices (including
+  copyright notices, patent notices, disclaimers of warranty, or limitations of
+  liability) contained within the Source Code Form of the Covered Software,
+  except that You may alter any license notices to the extent required to remedy
+  known factual inaccuracies.
+
+
+  3.5. Application of Additional Terms
+
+  You may choose to offer, and to charge a fee for, warranty, support, indemnity
+  or liability obligations to one or more recipients of Covered Software.
+  However, You may do so only on Your own behalf, and not on behalf of any
+  Contributor. You must make it absolutely clear that any such warranty, support,
+  indemnity, or liability obligation is offered by You alone, and You hereby
+  agree to indemnify every Contributor for any liability incurred by such
+  Contributor as a result of warranty, support, indemnity or liability terms You
+  offer. You may include additional disclaimers of warranty and limitations of
+  liability specific to any jurisdiction.
+
+
+4. Inability to Comply Due to Statute or Regulation
+---------------------------------------------------
+
+If it is impossible for You to comply with any of the terms of this License with
+respect to some or all of the Covered Software due to statute, judicial order, or
+regulation then You must: (a) comply with the terms of this License to the
+maximum extent possible; and (b) describe the limitations and the code they
+affect. Such description must be placed in a text file included with all
+distributions of the Covered Software under this License. Except to the extent
+prohibited by statute or regulation, such description must be sufficiently
+detailed for a recipient of ordinary skill to be able to understand it.
+
+
+5. Termination
+--------------
+
+  5.1. The rights granted under this License will terminate automatically if You
+  fail to comply with any of its terms. However, if You become compliant, then
+  the rights granted under this License from a particular Contributor are
+  reinstated (a) provisionally, unless and until such Contributor explicitly and
+  finally terminates Your grants, and (b) on an ongoing basis, if such
+  Contributor fails to notify You of the non-compliance by some reasonable means
+  prior to 60 days after You have come back into compliance. Moreover, Your
+  grants from a particular Contributor are reinstated on an ongoing basis if such
+  Contributor notifies You of the non-compliance by some reasonable means, this
+  is the first time You have received notice of non-compliance with this License
+  from such Contributor, and You become compliant prior to 30 days after Your
+  receipt of the notice.
+
+  5.2. If You initiate litigation against any entity by asserting a patent
+  infringement claim (excluding declaratory judgment actions, counter-claims, and
+  cross-claims) alleging that a Contributor Version directly or indirectly
+  infringes any patent, then the rights granted to You by any and all
+  Contributors for the Covered Software under Section 2.1 of this License shall
+  terminate.
+
+  5.3. In the event of termination under Sections 5.1 or 5.2 above, all end user
+  license agreements (excluding distributors and resellers) which have been
+  validly granted by You or Your distributors under this License prior to
+  termination shall survive termination.
+
+
+6. Disclaimer of Warranty
+-------------------------
+
+Covered Software is provided under this License on an "as is" basis, without
+warranty of any kind, either expressed, implied, or statutory, including, without
+limitation, warranties that the Covered Software is free of defects,
+merchantable, fit for a particular purpose or non-infringing. The entire risk as
+to the quality and performance of the Covered Software is with You. Should any
+Covered Software prove defective in any respect, You (not any Contributor) assume
+the cost of any necessary servicing, repair, or correction. This disclaimer of
+warranty constitutes an essential part of this License. No use of any Covered
+Software is authorized under this License except under this disclaimer.
+
+
+7. Limitation of Liability
+--------------------------
+
+Under no circumstances and under no legal theory, whether tort (including
+negligence), contract, or otherwise, shall any Contributor, or anyone who
+distributes Covered Software as permitted above, be liable to You for any direct,
+indirect, special, incidental, or consequential damages of any character
+including, without limitation, damages for lost profits, loss of goodwill, work
+stoppage, computer failure or malfunction, or any and all other commercial
+damages or losses, even if such party shall have been informed of the possibility
+of such damages. This limitation of liability shall not apply to liability for
+death or personal injury resulting from such party's negligence to the extent
+applicable law prohibits such limitation. Some jurisdictions do not allow the
+exclusion or limitation of incidental or consequential damages, so this exclusion
+and limitation may not apply to You.
+
+
+8. Litigation
+-------------
+
+Any litigation relating to this License may be brought only in the courts of a
+jurisdiction where the defendant maintains its principal place of business and
+such litigation shall be governed by laws of that jurisdiction, without reference
+to its conflict-of-law provisions. Nothing in this Section shall prevent a
+party's ability to bring cross-claims or counter-claims.
+
+
+9. Miscellaneous
+----------------
+
+This License represents the complete agreement concerning the subject matter
+hereof. If any provision of this License is held to be unenforceable, such
+provision shall be reformed only to the extent necessary to make it enforceable.
+Any law or regulation which provides that the language of a contract shall be
+construed against the drafter shall not be used to construe this License against
+a Contributor.
+
+
+10. Versions of the License
+---------------------------
+
+
+  10.1. New Versions
+
+  Mozilla Foundation is the license steward. Except as provided in Section 10.3,
+  no one other than the license steward has the right to modify or publish new
+  versions of this License. Each version will be given a distinguishing version
+  number.
+
+
+  10.2. Effect of New Versions
+
+  You may distribute the Covered Software under the terms of the version of the
+  License under which You originally received the Covered Software, or under the
+  terms of any subsequent version published by the license steward.
+
+
+  10.3. Modified Versions
+
+  If you create software not governed by this License, and you want to create a
+  new license for such software, you may create and use a modified version of
+  this License if you rename the license and remove any references to the name of
+  the license steward (except to note that such modified license differs from
+  this License).
+
+
+  10.4. Distributing Source Code Form that is Incompatible With Secondary
+  Licenses
+
+  If You choose to distribute Source Code Form that is Incompatible With
+  Secondary Licenses under the terms of this version of the License, the notice
+  described in Exhibit B of this License must be attached.
+
+
+Exhibit A - Source Code Form License Notice
+-------------------------------------------
+
+  This Source Code Form is subject to the terms of the Mozilla Public License,
+  v. 2.0. If a copy of the MPL was not distributed with this file, You can
+  obtain one at http://mozilla.org/MPL/2.0/.
+
+If it is not possible or desirable to put the notice in a particular file, then
+You may include the notice in a location (such as a LICENSE file in a relevant
+directory) where a recipient would be likely to look for such a notice.
+
+You may add additional accurate notices of copyright ownership.
+
+
+Exhibit B - "Incompatible With Secondary Licenses" Notice
+---------------------------------------------------------
+
+  This Source Code Form is "Incompatible With Secondary Licenses", as defined
+  by the Mozilla Public License, v. 2.0.
+
+---
+
+Python Software Foundation License 2.0
+(looseversion 1.3.0, python-typing-extensions 4.16.0)
+
+This license was approved as the official PSF License Version 2 on October 22,
+2004. The only differences between this and version 1 of the PSF license consist
+of removing Python version numbers (like 2.1.1 or 2.3).
+
+
+
+PYTHON SOFTWARE FOUNDATION LICENSE VERSION 2
+============================================
+
+--------------------------------------------
+
+  1.  This LICENSE AGREEMENT is between the Python Software Foundation ("PSF"),
+    and the Individual or Organization ("Licensee") accessing and otherwise using
+    this software ("Python") in source or binary form and its associated
+    documentation.
+
+  2.  Subject to the terms and conditions of this License Agreement, PSF hereby
+    grants Licensee a nonexclusive, royalty-free, world-wide license to
+    reproduce, analyze, test, perform and/or display publicly, prepare derivative
+    works, distribute, and otherwise use Python alone or in any derivative
+    version, provided, however, that PSF's License Agreement and PSF's notice of
+    copyright, i.e., "Copyright (c) 2001, 2002, 2003, 2004 Python Software
+    Foundation; All Rights Reserved" are retained in Python alone or in any
+    derivative version prepared by Licensee.
+
+  3. In the event Licensee prepares a derivative work that is based on or
+    incorporates Python or any part thereof, and wants to make the derivative
+    work available to others as provided herein, then Licensee hereby agrees to
+    include in any such work a brief summary of the changes made to Python.
+
+  4.  PSF is making Python available to Licensee on an "AS IS" basis. PSF MAKES
+    NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED. BY WAY OF EXAMPLE, BUT
+    NOT LIMITATION, PSF MAKES NO AND DISCLAIMS ANY REPRESENTATION OR WARRANTY OF
+    MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE OR THAT THE USE OF
+    PYTHON WILL NOT INFRINGE ANY THIRD PARTY RIGHTS.
+
+  5.  PSF SHALL NOT BE LIABLE TO LICENSEE OR ANY OTHER USERS OF PYTHON FOR ANY
+    INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES OR LOSS AS A RESULT OF
+    MODIFYING, DISTRIBUTING, OR OTHERWISE USING PYTHON, OR ANY DERIVATIVE
+    THEREOF, EVEN IF ADVISED OF THE POSSIBILITY THEREOF.
+
+  6.  This License Agreement will automatically terminate upon a material breach
+    of its terms and conditions.
+
+  7.  Nothing in this License Agreement shall be deemed to create any
+    relationship of agency, partnership, or joint venture between PSF and
+    Licensee. This License Agreement does not grant permission to use PSF
+    trademarks or trade name in a trademark sense to endorse or promote products
+    or services of Licensee, or any third party.
+
+  8.  By copying, installing or otherwise using Python, Licensee agrees to be
+    bound by the terms and conditions of this License Agreement.
+
+---
+
